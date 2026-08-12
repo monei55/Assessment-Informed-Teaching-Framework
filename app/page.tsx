@@ -1,6 +1,7 @@
 import { FrameworkCycle } from "@/components/FrameworkCycle";
 import { Header } from "@/components/Header";
 import { QuestionCard } from "@/components/QuestionCard";
+import { RolePathways } from "@/components/layout/RolePathways";
 
 const clarityLenses = [
   {
@@ -233,6 +234,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+<RolePathways />
 
         {/* SELF-SELECTION */}
         <section className="section section-soft" id="strengthen">

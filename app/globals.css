@@ -2649,3 +2649,2873 @@ blockquote footer {
     padding: 21px;
   }
 }
+/* =========================================================
+   ROLE PATHWAYS
+========================================================= */
+
+.role-pathways-section {
+  background:
+    radial-gradient(circle at 10% 20%, var(--learning-soft), transparent 28%),
+    radial-gradient(circle at 90% 80%, var(--impact-soft), transparent 30%),
+    #ffffff;
+}
+
+.role-pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 44px;
+}
+
+.role-pathway-card {
+  position: relative;
+  display: flex;
+  min-height: 330px;
+  flex-direction: column;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-small);
+  text-decoration: none;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.role-pathway-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  content: "";
+}
+
+.role-pathway-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.role-pathway-card.teacher-path::before {
+  background: var(--learning);
+}
+
+.role-pathway-card.coach-path::before {
+  background: var(--pedagogy);
+}
+
+.role-pathway-card.leader-path::before {
+  background: var(--impact);
+}
+
+.role-pathway-number {
+  margin-bottom: 48px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+}
+
+.role-pathway-role {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.role-pathway-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.55rem;
+}
+
+.role-pathway-copy > p:last-child {
+  color: var(--muted);
+}
+
+.role-pathway-arrow {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-top: auto;
+  border-radius: 50%;
+  background: var(--soft);
+  font-size: 1.15rem;
+  font-weight: 800;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.role-pathway-card:hover .role-pathway-arrow {
+  transform: translateX(4px);
+}
+
+.teacher-path:hover {
+  border-color: var(--learning);
+}
+
+.teacher-path:hover .role-pathway-arrow {
+  background: var(--learning-soft);
+  color: var(--learning);
+}
+
+.coach-path:hover {
+  border-color: var(--pedagogy);
+}
+
+.coach-path:hover .role-pathway-arrow {
+  background: var(--pedagogy-soft);
+  color: var(--pedagogy);
+}
+
+.leader-path:hover {
+  border-color: var(--impact);
+}
+
+.leader-path:hover .role-pathway-arrow {
+  background: var(--impact-soft);
+  color: var(--impact);
+}
+
+.role-pathways-note {
+  max-width: 760px;
+  margin: 30px auto 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .role-pathways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .role-pathway-card {
+    min-height: auto;
+  }
+
+  .role-pathway-number {
+    margin-bottom: 28px;
+  }
+
+  .role-pathway-arrow {
+    margin-top: 22px;
+  }
+}
+/* =========================================================
+   TEACHER PATHWAY
+========================================================= */
+
+.pathway-hero {
+  padding: 100px 0 90px;
+  background:
+    radial-gradient(circle at 85% 15%, var(--learning-soft), transparent 32%),
+    linear-gradient(180deg, #ffffff, #f9fbfc);
+}
+
+.pathway-hero .container {
+  max-width: 1000px;
+}
+
+.pathway-hero h1 {
+  max-width: 850px;
+  margin-bottom: 24px;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+}
+
+.pathway-lead {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.25rem;
+}
+
+.pathway-principle {
+  max-width: 760px;
+  margin-top: 38px;
+  padding: 24px 26px;
+  border-left: 5px solid var(--learning);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+}
+
+.pathway-principle strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--learning);
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pathway-principle p {
+  margin: 0;
+  color: var(--slate);
+}
+
+/* Eight connected cogs */
+
+.teacher-cog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.teacher-cog-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 18px;
+  align-items: start;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.teacher-cog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.teacher-cog-card > span {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 850;
+}
+
+.teacher-cog-card h3 {
+  margin-bottom: 7px;
+  font-size: 1.3rem;
+}
+
+.teacher-cog-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.teacher-cog-card em {
+  font-style: normal;
+  font-weight: 850;
+}
+
+.teacher-cog-card.learning {
+  border-top: 4px solid var(--learning);
+}
+
+.teacher-cog-card.learning > span {
+  background: var(--learning);
+}
+
+.teacher-cog-card.assessment {
+  border-top: 4px solid var(--assessment);
+}
+
+.teacher-cog-card.assessment > span {
+  background: var(--assessment);
+}
+
+.teacher-cog-card.pedagogy {
+  border-top: 4px solid var(--pedagogy);
+}
+
+.teacher-cog-card.pedagogy > span {
+  background: var(--pedagogy);
+}
+
+.teacher-cog-card.impact {
+  border-top: 4px solid var(--impact);
+}
+
+.teacher-cog-card.impact > span {
+  background: var(--impact);
+}
+
+/* Starting-point guidance */
+
+.teacher-pathway-support {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.teacher-pathway-support > div:last-child {
+  display: grid;
+  gap: 12px;
+}
+
+.teacher-pathway-support > div:last-child p {
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--muted);
+}
+
+.teacher-pathway-support strong {
+  color: var(--ink);
+}
+
+/* Teacher CTA */
+
+.teacher-pathway-cta {
+  text-align: center;
+}
+
+.teacher-pathway-cta .container {
+  max-width: 820px;
+}
+
+.teacher-pathway-cta p:not(.eyebrow) {
+  max-width: 680px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+@media (max-width: 800px) {
+  .teacher-cog-grid,
+  .teacher-pathway-support {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-pathway-support {
+    gap: 38px;
+  }
+
+  .pathway-hero {
+    padding: 75px 0 70px;
+  }
+}
+
+@media (max-width: 520px) {
+  .teacher-cog-card {
+    grid-template-columns: auto 1fr;
+  }
+
+  .teacher-cog-card em {
+    display: none;
+  }
+}
+/* =========================================================
+   COG CONNECTIONS
+========================================================= */
+
+.cog-connections-section {
+  background:
+    radial-gradient(circle at 8% 15%, var(--learning-soft), transparent 26%),
+    radial-gradient(circle at 92% 85%, var(--impact-soft), transparent 28%),
+    #ffffff;
+}
+
+.cog-connections-layout {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.cog-current {
+  position: sticky;
+  top: 120px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-top: 6px solid var(--learning);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.cog-current > span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--learning);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cog-current strong {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 1.75rem;
+  line-height: 1.15;
+}
+
+.cog-current p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cog-connections-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.cog-connection-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 23px 24px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cog-connection-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow);
+}
+
+.cog-connection-card h3 {
+  margin-bottom: 7px;
+  font-size: 1.22rem;
+}
+
+.cog-connection-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cog-connection-card > span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--soft);
+  font-weight: 850;
+}
+
+.cog-connection-card.learning {
+  border-left: 5px solid var(--learning);
+}
+
+.cog-connection-card.learning:hover {
+  border-color: var(--learning);
+}
+
+.cog-connection-card.assessment {
+  border-left: 5px solid var(--assessment);
+}
+
+.cog-connection-card.assessment:hover {
+  border-color: var(--assessment);
+}
+
+.cog-connection-card.pedagogy {
+  border-left: 5px solid var(--pedagogy);
+}
+
+.cog-connection-card.pedagogy:hover {
+  border-color: var(--pedagogy);
+}
+
+.cog-connection-card.impact {
+  border-left: 5px solid var(--impact);
+}
+
+.cog-connection-card.impact:hover {
+  border-color: var(--impact);
+}
+
+.cog-connections-insight {
+  max-width: 900px;
+  margin: 34px auto 0;
+  padding: 22px 24px;
+  border-left: 5px solid var(--slate);
+  border-radius: 14px;
+  background: var(--soft);
+}
+
+.cog-connections-insight strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--slate);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cog-connections-insight p {
+  margin: 0;
+  color: var(--slate);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .cog-connections-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cog-current {
+    position: static;
+  }
+}
+/* =========================================================
+   SEE THE COGS IN ACTION
+========================================================= */
+
+.cogs-action-section {
+  background: var(--soft);
+}
+
+.cogs-action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 44px;
+}
+
+.cogs-action-card {
+  position: relative;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+}
+
+.cogs-action-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  content: "";
+}
+
+.cogs-action-card.learning::before {
+  background: var(--learning);
+}
+
+.cogs-action-card.assessment::before {
+  background: var(--assessment);
+}
+
+.cogs-action-card.pedagogy::before {
+  background: var(--pedagogy);
+}
+
+.cogs-action-card.impact::before {
+  background: var(--impact);
+}
+
+.cogs-action-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.cogs-action-cog {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--soft);
+  font-size: 1.3rem;
+}
+
+.cogs-action-label {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.cogs-action-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.cogs-action-evidence {
+  margin-bottom: 16px;
+  padding: 18px;
+  border-radius: 14px;
+  background: var(--soft);
+}
+
+.cogs-action-evidence > span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.cogs-action-evidence p {
+  margin: 0;
+  color: var(--slate);
+}
+
+.cogs-action-connection {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.cogs-action-connection strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.78rem;
+}
+
+.cogs-action-connection p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.cogs-action-centre {
+  max-width: 700px;
+  margin: 34px auto 0;
+  padding: 25px 28px;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: #ffffff;
+  text-align: center;
+}
+
+.cogs-action-centre span {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.cogs-action-centre strong {
+  font-size: 1.08rem;
+}
+
+@media (max-width: 800px) {
+  .cogs-action-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   EVIDENCE REVEAL
+========================================================= */
+
+.evidence-reveal-section {
+  background: #ffffff;
+}
+
+.evidence-reveal-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 22px;
+  margin-top: 42px;
+  align-items: stretch;
+}
+
+/* Source evidence */
+
+.evidence-source-card,
+.evidence-notice-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+}
+
+.evidence-source-card {
+  border-top: 5px solid var(--learning);
+}
+
+.evidence-source-label,
+.evidence-notice-label {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.evidence-excerpt {
+  position: relative;
+  padding: 26px 28px;
+  border-left: 4px solid var(--learning);
+  border-radius: 12px;
+  background: var(--soft);
+}
+
+.evidence-excerpt::before {
+  content: "“";
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  color: var(--learning);
+  font-size: 2.2rem;
+  font-weight: 800;
+  opacity: 0.3;
+}
+
+.evidence-excerpt p {
+  margin: 0;
+  color: var(--slate);
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+/* Evidence tags */
+
+.evidence-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.evidence-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.evidence-tag.learning {
+  background: var(--learning-soft);
+  color: var(--learning);
+}
+
+.evidence-tag.assessment {
+  background: var(--assessment-soft);
+  color: var(--assessment);
+}
+
+.evidence-tag.pedagogy {
+  background: var(--pedagogy-soft);
+  color: var(--pedagogy);
+}
+
+.evidence-tag.impact {
+  background: var(--impact-soft);
+  color: var(--impact);
+}
+
+/* What should I notice? */
+
+.evidence-notice-card {
+  border-top: 5px solid var(--assessment);
+}
+
+.evidence-notice-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.evidence-notice-card li {
+  position: relative;
+  padding: 15px 16px 15px 42px;
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--slate);
+}
+
+.evidence-notice-card li::before {
+  content: "✓";
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  color: var(--learning);
+  font-weight: 900;
+}
+
+.evidence-reasoning {
+  margin-top: 22px;
+  padding: 20px;
+  border-left: 4px solid var(--pedagogy);
+  border-radius: 12px;
+  background: var(--pedagogy-soft);
+}
+
+.evidence-reasoning strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.evidence-reasoning p {
+  margin: 0;
+  color: var(--slate);
+}
+
+/* Try it with your own work */
+
+.evidence-try {
+  max-width: 850px;
+  margin: 30px auto 0;
+  padding: 22px 26px;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  background: var(--soft);
+  text-align: center;
+}
+
+.evidence-try span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--learning);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.evidence-try p {
+  margin: 0;
+  color: var(--slate);
+  font-weight: 650;
+}
+
+@media (max-width: 850px) {
+  .evidence-reveal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   EVIDENCE FILTER CONTROLS
+========================================================= */
+
+.evidence-filter-area {
+  margin-top: 20px;
+}
+
+.evidence-filter-instruction {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.evidence-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.evidence-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 7px 13px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--slate);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+  appearance: none;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.evidence-filter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(38, 50, 56, 0.08);
+}
+
+/* Show all */
+
+.evidence-filter.all {
+  border-color: var(--line);
+  background: #ffffff;
+  color: var(--slate);
+}
+
+.evidence-filter.all.active {
+  border-color: var(--slate);
+  background: var(--slate);
+  color: #ffffff;
+}
+
+/* Cognitive demand */
+
+.evidence-filter.learning {
+  background: var(--learning-soft);
+  color: var(--learning);
+}
+
+.evidence-filter.learning.active {
+  border-color: var(--learning);
+  background: var(--learning);
+  color: #ffffff;
+}
+
+/* Knowledge */
+
+.evidence-filter.assessment {
+  background: var(--assessment-soft);
+  color: var(--assessment);
+}
+
+.evidence-filter.assessment.active {
+  border-color: var(--assessment);
+  background: var(--assessment);
+  color: #ffffff;
+}
+
+/* Skills */
+
+.evidence-filter.pedagogy {
+  background: var(--pedagogy-soft);
+  color: var(--pedagogy);
+}
+
+.evidence-filter.pedagogy.active {
+  border-color: var(--pedagogy);
+  background: var(--pedagogy);
+  color: #ffffff;
+}
+
+/* Key terminology */
+
+.evidence-filter.impact {
+  background: var(--impact-soft);
+  color: var(--impact);
+}
+
+.evidence-filter.impact.active {
+  border-color: var(--impact);
+  background: var(--impact);
+  color: #ffffff;
+}
+/* =========================================================
+   INLINE EVIDENCE HIGHLIGHTING
+========================================================= */
+
+.evidence-highlight {
+  display: inline;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-weight: 800;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.evidence-highlight.cognitive {
+  background: var(--learning-soft);
+  color: var(--learning);
+}
+
+.evidence-highlight.knowledge {
+  background: var(--assessment-soft);
+  color: var(--assessment);
+}
+
+.evidence-highlight.skills {
+  background: var(--pedagogy-soft);
+  color: var(--pedagogy);
+}
+
+.evidence-highlight.terminology {
+  background: var(--impact-soft);
+  color: var(--impact);
+}
+/* =========================================================
+   ASSESSMENT DESIGN INLINE HIGHLIGHTING
+========================================================= */
+
+.evidence-highlight.alignment {
+  background: var(--learning-soft);
+  color: var(--learning);
+}
+
+.evidence-highlight.cognitive {
+  background: var(--assessment-soft);
+  color: var(--assessment);
+}
+
+.evidence-highlight.evidence {
+  background: var(--pedagogy-soft);
+  color: var(--pedagogy);
+}
+
+.evidence-highlight.accessibility {
+  background: var(--impact-soft);
+  color: var(--impact);
+}
+/* =========================================================
+   AUTHENTIC SOURCE EXAMPLE
+========================================================= */
+
+.evidence-source-image {
+  margin-bottom: 22px;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.evidence-source-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* =========================================================
+   MARKING GUIDE — C TO A PROGRESSION
+========================================================= */
+
+.framework-example-section {
+  margin-top: 56px;
+}
+
+.framework-example-heading {
+  max-width: 820px;
+  margin-bottom: 24px;
+}
+
+.framework-example-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4f8297;
+}
+
+.framework-example-heading h2 {
+  margin: 0 0 10px;
+}
+
+.framework-example-heading p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.marking-progression {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #ffffff;
+}
+
+.marking-progression-intro {
+  max-width: 820px;
+  margin-bottom: 28px;
+}
+
+.marking-progression-intro h3 {
+  margin: 12px 0 8px;
+}
+
+.marking-progression-intro p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.progression-cards {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.progression-card {
+  position: relative;
+  padding: 26px 22px 22px;
+  border-radius: 18px;
+  min-height: 220px;
+}
+
+.progression-card h3 {
+  margin: 18px 0 10px;
+  font-size: 1.05rem;
+}
+
+.progression-card p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.progression-grade {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: #ffffff;
+}
+
+.progression-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.progression-c {
+  background: #eef6eb;
+  border-top: 5px solid #5f8f4e;
+}
+
+.progression-c .progression-grade {
+  color: #5f8f4e;
+}
+
+.progression-b {
+  background: #fff4e5;
+  border-top: 5px solid #d9821b;
+}
+
+.progression-b .progression-grade {
+  color: #d9821b;
+}
+
+.progression-a {
+  background: #f2eef8;
+  border-top: 5px solid #7653a6;
+}
+
+.progression-a .progression-grade {
+  color: #7653a6;
+}
+
+.progression-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #4f8297;
+}
+
+.marking-reasoning {
+  margin-top: 24px;
+  padding: 20px 22px;
+  border-left: 4px solid #d9821b;
+  border-radius: 14px;
+  background: #fff0dd;
+}
+
+.marking-reasoning strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.marking-reasoning p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .progression-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .progression-arrow {
+    transform: rotate(90deg);
+    min-height: 28px;
+  }
+}
+/* =========================================================
+   MARKING GUIDE — LIVING SAMPLE
+========================================================= */
+
+.living-sample {
+  margin-top: 32px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.living-sample-heading {
+  max-width: 850px;
+  margin-bottom: 24px;
+}
+
+.living-sample-heading h3 {
+  margin: 10px 0 8px;
+  font-size: 1.35rem;
+}
+
+.living-sample-heading p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.living-sample-grid {
+  display: grid;
+  grid-template-columns: 180px repeat(3, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.living-row-label {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  border-radius: 14px;
+  background: #f5f7f8;
+  line-height: 1.4;
+}
+
+.living-cell {
+  position: relative;
+  padding: 20px;
+  border-radius: 16px;
+  line-height: 1.6;
+}
+
+.living-cell p {
+  margin: 12px 0 0;
+}
+
+.living-grade {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  font-weight: 800;
+}
+
+.living-c {
+  background: #eef6eb;
+  border-top: 4px solid #5f8f4e;
+}
+
+.living-c .living-grade {
+  color: #5f8f4e;
+}
+
+.living-b {
+  background: #fff4e5;
+  border-top: 4px solid #d9821b;
+}
+
+.living-b .living-grade {
+  color: #d9821b;
+}
+
+.living-a {
+  background: #f2eef8;
+  border-top: 4px solid #7653a6;
+}
+
+.living-a .living-grade {
+  color: #7653a6;
+}
+
+.living-cell mark {
+  padding: 2px 4px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.75);
+  font-weight: 700;
+  color: inherit;
+}
+
+.living-sample-notice {
+  margin-top: 20px;
+  padding: 20px 22px;
+  border-left: 4px solid #4f8297;
+  border-radius: 14px;
+  background: #eef5f7;
+}
+
+.living-sample-notice strong {
+  display: block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+}
+
+.living-sample-notice p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+  .living-sample-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .living-row-label {
+    margin-top: 14px;
+  }
+}
+/* =========================================================
+   FROM JUDGEMENT TO LEARNING
+========================================================= */
+
+.visible-learning-transition {
+  padding: 44px 0 20px;
+}
+
+.transition-card {
+  max-width: 820px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.transition-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--learning);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.transition-card h2 {
+  margin-bottom: 12px;
+}
+
+.transition-card p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.transition-arrow {
+  margin: 18px 0 8px;
+  color: var(--learning);
+  font-size: 2rem;
+  font-weight: 850;
+}
+
+.transition-card > strong {
+  color: var(--slate);
+  font-size: 0.92rem;
+}
+
+/* =========================================================
+   VISIBLE LEARNING EXAMPLE
+========================================================= */
+
+.visible-learning-example {
+  background: var(--soft);
+}
+
+.visible-learning-image {
+  margin-top: 32px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+}
+
+.visible-learning-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.visible-learning-purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.visible-learning-purpose {
+  padding: 26px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-small);
+}
+
+.visible-learning-purpose > span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.visible-learning-purpose h3 {
+  margin-bottom: 10px;
+}
+
+.visible-learning-purpose p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.learning-wall-purpose {
+  border-top: 5px solid var(--learning);
+}
+
+.learning-wall-purpose > span {
+  color: var(--learning);
+}
+
+.bump-wall-purpose {
+  border-top: 5px solid var(--impact);
+}
+
+.bump-wall-purpose > span {
+  color: var(--impact);
+}
+
+.visible-learning-reasoning {
+  max-width: 860px;
+  margin: 26px auto 0;
+  padding: 22px 24px;
+  border-left: 5px solid var(--pedagogy);
+  border-radius: 14px;
+  background: var(--pedagogy-soft);
+}
+
+.visible-learning-reasoning strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.visible-learning-reasoning p {
+  margin: 0;
+  color: var(--slate);
+}
+
+@media (max-width: 760px) {
+  .visible-learning-purpose-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   STUDENT GTMJ — TRANSLATE FOR LEARNERS
+========================================================= */
+
+.student-gtmj-bridge {
+  margin-top: 28px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #ffffff;
+}
+
+.student-gtmj-copy {
+  max-width: 820px;
+  margin-bottom: 24px;
+}
+
+.student-gtmj-copy h3 {
+  margin: 10px 0 8px;
+  font-size: 1.35rem;
+}
+
+.student-gtmj-copy p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.student-gtmj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.student-gtmj-card {
+  padding: 24px;
+  border-radius: 18px;
+  min-height: 210px;
+}
+
+.student-gtmj-card > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 850;
+}
+
+.student-gtmj-card h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.student-gtmj-card p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* C — Expected Standard */
+
+.student-gtmj-c {
+  border-top: 5px solid #5f8f4e;
+  background: #eef6eb;
+}
+
+.student-gtmj-c > span {
+  color: #5f8f4e;
+}
+
+/* B — Stronger Evidence */
+
+.student-gtmj-b {
+  border-top: 5px solid #d9821b;
+  background: #fff4e5;
+}
+
+.student-gtmj-b > span {
+  color: #d9821b;
+}
+
+/* A — More Sophisticated Evidence */
+
+.student-gtmj-a {
+  border-top: 5px solid #7653a6;
+  background: #f2eef8;
+}
+
+.student-gtmj-a > span {
+  color: #7653a6;
+}
+
+/* Why this matters */
+
+.student-gtmj-reasoning {
+  margin-top: 22px;
+  padding: 20px 22px;
+  border-left: 4px solid #4f8297;
+  border-radius: 14px;
+  background: #eef5f7;
+}
+
+.student-gtmj-reasoning strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.student-gtmj-reasoning p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+  .student-gtmj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-gtmj-card {
+    min-height: auto;
+  }
+}
+/* =========================================================
+   TEACHING DECISIONS
+========================================================= */
+
+.teaching-decisions-panel {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #ffffff;
+}
+
+.teaching-decisions-intro {
+  max-width: 850px;
+  margin-bottom: 26px;
+}
+
+.teaching-decisions-intro h3 {
+  margin: 10px 0 8px;
+  font-size: 1.35rem;
+}
+
+.teaching-decisions-intro p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Four professional lenses */
+
+.teaching-lenses {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.teaching-lens {
+  position: relative;
+  padding: 22px;
+  border-radius: 18px;
+  min-height: 245px;
+}
+
+.teaching-lens-number {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 1.65rem;
+  font-weight: 850;
+  opacity: 0.55;
+}
+
+.teaching-lens-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.teaching-lens h3 {
+  margin: 12px 0 9px;
+  font-size: 1rem;
+}
+
+.teaching-lens p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Related colours without copying C-B-A */
+
+.teaching-knowledge {
+  background: #edf6f8;
+  border-top: 5px solid #4f8297;
+}
+
+.teaching-skills {
+  background: #eef6eb;
+  border-top: 5px solid #5f8f4e;
+}
+
+.teaching-models {
+  background: #fff4e5;
+  border-top: 5px solid #d9821b;
+}
+
+.teaching-practice {
+  background: #f2eef8;
+  border-top: 5px solid #7653a6;
+}
+
+/* Living sample */
+
+.teaching-living-sample {
+  margin-top: 32px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.teaching-living-heading {
+  max-width: 850px;
+  margin-bottom: 22px;
+}
+
+.teaching-living-heading h3 {
+  margin: 10px 0 8px;
+  font-size: 1.3rem;
+}
+
+.teaching-living-heading p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.teaching-living-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.teaching-example {
+  padding: 24px;
+  border-radius: 18px;
+}
+
+.teaching-example > span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.teaching-example h4 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.teaching-example ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.teaching-example li {
+  margin-bottom: 7px;
+  line-height: 1.5;
+}
+
+.teaching-example-knowledge {
+  background: #edf6f8;
+  border-left: 4px solid #4f8297;
+}
+
+.teaching-example-skills {
+  background: #eef6eb;
+  border-left: 4px solid #5f8f4e;
+}
+
+.teaching-example-models {
+  background: #fff4e5;
+  border-left: 4px solid #d9821b;
+}
+
+.teaching-example-practice {
+  background: #f2eef8;
+  border-left: 4px solid #7653a6;
+}
+
+/* Final reasoning */
+
+.teaching-decision-callout {
+  margin-top: 20px;
+  padding: 21px 23px;
+  border-left: 5px solid var(--pedagogy);
+  border-radius: 14px;
+  background: var(--pedagogy-soft);
+}
+
+.teaching-decision-callout strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.teaching-decision-callout p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+  .teaching-lenses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .teaching-lenses,
+  .teaching-living-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-lens {
+    min-height: auto;
+  }
+}
+/* =========================================================
+   EVIDENCE OF LEARNING
+========================================================= */
+
+.evidence-learning-panel {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #ffffff;
+}
+
+.evidence-learning-intro,
+.evidence-analysis-heading {
+  max-width: 850px;
+}
+
+.evidence-learning-intro {
+  margin-bottom: 24px;
+}
+
+.evidence-learning-intro h3,
+.evidence-analysis-heading h3 {
+  margin: 10px 0 8px;
+  font-size: 1.3rem;
+}
+
+.evidence-learning-intro p,
+.evidence-analysis-heading p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Student work sample */
+
+.student-work-image {
+  margin-top: 24px;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.student-work-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Evidence analysis */
+
+.evidence-analysis {
+  margin-top: 32px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.evidence-analysis-heading {
+  margin-bottom: 22px;
+}
+
+.evidence-analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.evidence-analysis-card {
+  padding: 23px;
+  border-radius: 18px;
+  background: #f6f8f9;
+}
+
+.evidence-analysis-number {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 850;
+  opacity: 0.45;
+}
+
+.evidence-analysis-label {
+  display: block;
+  font-size: 0.73rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.evidence-analysis-card h4 {
+  margin: 13px 0 8px;
+  font-size: 1rem;
+}
+
+.evidence-analysis-card > p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.evidence-connection {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.evidence-connection strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.evidence-connection p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Subtle aspect colours */
+
+.evidence-planning {
+  border-top: 5px solid #5f8f4e;
+}
+
+.evidence-data {
+  border-top: 5px solid #4f8297;
+}
+
+.evidence-understanding {
+  border-top: 5px solid #d9821b;
+}
+
+.evidence-model {
+  border-top: 5px solid #7653a6;
+}
+
+.evidence-use {
+  grid-column: 1 / -1;
+  border-top: 5px solid #4f8297;
+}
+
+/* On-balance judgement */
+
+.evidence-judgement {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 26px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 26px;
+  border-radius: 18px;
+  background: #eef6eb;
+  border-left: 5px solid #5f8f4e;
+}
+
+.evidence-judgement-grade {
+  text-align: center;
+}
+
+.evidence-judgement-grade span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.evidence-judgement-grade strong {
+  display: inline-flex;
+  width: 78px;
+  height: 78px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #5f8f4e;
+  font-size: 2.3rem;
+}
+
+.evidence-judgement-copy h3 {
+  margin: 0 0 8px;
+}
+
+.evidence-judgement-copy p {
+  margin: 0 0 9px;
+  line-height: 1.65;
+}
+
+.evidence-judgement-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* Evidence back into teaching */
+
+.evidence-next-step {
+  margin-top: 24px;
+  padding: 24px;
+  border-left: 5px solid #d9821b;
+  border-radius: 16px;
+  background: #fff4e5;
+}
+
+.evidence-next-step h3 {
+  margin: 10px 0 8px;
+}
+
+.evidence-next-step > p {
+  margin: 0;
+  max-width: 900px;
+  line-height: 1.7;
+}
+
+.evidence-loop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.evidence-loop span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+.evidence-loop b {
+  color: #d9821b;
+}
+
+@media (max-width: 800px) {
+  .evidence-analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-use {
+    grid-column: auto;
+  }
+
+  .evidence-judgement {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-judgement-grade {
+    text-align: left;
+  }
+}
+/* =========================================================
+   EVIDENCE MAP
+========================================================= */
+
+.evidence-map {
+  width: 100%;
+  max-width: 1180px;
+  margin: 28px auto 0;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #ffffff;
+}
+
+.evidence-map-heading {
+  max-width: 850px;
+  margin-bottom: 24px;
+}
+
+.evidence-map-heading h3 {
+  margin: 10px 0 8px;
+  font-size: 1.3rem;
+}
+
+.evidence-map-heading p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.evidence-map-layout {
+  display: grid;
+  gap: 22px;
+}
+
+.evidence-map-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.evidence-map-button {
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.evidence-map-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-small);
+}
+
+.evidence-map-button.active {
+  color: #ffffff;
+}
+
+.evidence-map-button.planning.active {
+  background: #5f8f4e;
+}
+
+.evidence-map-button.data.active {
+  background: #4f8297;
+}
+
+.evidence-map-button.understanding.active {
+  background: #d9821b;
+}
+
+.evidence-map-button.model.active {
+  background: #7653a6;
+}
+
+.evidence-map-button.evidence.active {
+  background: var(--slate);
+}
+
+.evidence-map-work {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 20px;
+  align-items: start;
+  width: 100%;
+}
+
+.evidence-map-image {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.evidence-map-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.evidence-map-detail {
+  padding: 24px;
+  border-radius: 18px;
+  background: var(--soft);
+}
+
+.evidence-map-detail-label {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--slate);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.evidence-map-detail-block {
+  margin-bottom: 14px;
+  padding: 16px;
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.evidence-map-detail-block:last-child {
+  margin-bottom: 0;
+}
+
+.evidence-map-detail-block strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.evidence-map-detail-block p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.evidence-map-standard {
+  border-left: 4px solid #5f8f4e;
+}
+
+.evidence-map-judgement {
+  border-left: 4px solid #4f8297;
+}
+
+.evidence-map-stronger {
+  border-left: 4px solid #7653a6;
+}
+
+@media (max-width: 900px) {
+  .evidence-map-work {
+    grid-template-columns: 1fr;
+  }
+}
+.evidence-map-image,
+.evidence-map-detail {
+  min-width: 0;
+}
+.evidence-map-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* =========================================================
+   EVIDENCE MAP HIGHLIGHT
+========================================================= */
+
+.evidence-map-image-stage {
+  position: relative;
+}
+
+.evidence-map-image-stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.evidence-map-highlight {
+  position: absolute;
+  z-index: 5;
+  border: 3px solid currentColor;
+  border-radius: 12px;
+  pointer-events: none;
+  transition:
+    top 0.3s ease,
+    left 0.3s ease,
+    width 0.3s ease,
+    height 0.3s ease,
+    background 0.2s ease;
+}
+
+.evidence-map-highlight.planning {
+  color: #5f8f4e;
+  background: rgba(95, 143, 78, 0.18);
+}
+
+.evidence-map-highlight.data {
+  color: #4f8297;
+  background: rgba(79, 130, 151, 0.18);
+}
+
+.evidence-map-highlight.understanding {
+  color: #d9821b;
+  background: rgba(217, 130, 27, 0.18);
+}
+
+.evidence-map-highlight.model {
+  color: #7653a6;
+  background: rgba(118, 83, 166, 0.18);
+}
+
+.evidence-map-highlight.evidence {
+  color: #45555f;
+  background: rgba(69, 85, 95, 0.18);
+}
+/* =========================================================
+   A-LEVEL STUDENT WORK SAMPLE
+========================================================= */
+
+.evidence-map-left {
+  min-width: 0;
+}
+
+.a-example-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 10px 12px;
+  border: 1px solid rgba(118, 83, 166, 0.28);
+  border-radius: 12px;
+  background: #f7f4fb;
+  color: #60428f;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+  appearance: none;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.a-example-toggle:hover {
+  transform: translateY(-1px);
+  border-color: #7653a6;
+  background: #f1ebf8;
+}
+
+.a-example-toggle-grade {
+  display: grid;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: #7653a6;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.a-example-toggle-arrow {
+  margin-left: auto;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.a-example-toggle-arrow.open {
+  transform: rotate(180deg);
+}
+
+.a-example-reveal {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #f7f4fb;
+}
+
+.a-example-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.a-example-heading > div {
+  display: grid;
+  gap: 4px;
+}
+
+.a-example-heading span:first-child {
+  color: #7653a6;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.a-example-heading strong {
+  color: var(--slate);
+  font-size: 1rem;
+}
+
+.a-example-grade {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #7653a6;
+  color: #ffffff !important;
+  font-size: 1.15rem !important;
+  font-weight: 850 !important;
+  letter-spacing: 0 !important;
+}
+
+.a-student-work {
+  overflow: hidden;
+  border: 1px solid #d8d5dc;
+  border-radius: 12px;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #fffefa 0,
+      #fffefa 31px,
+      #dfe6ed 32px
+    );
+  box-shadow: 0 4px 12px rgba(35, 48, 58, 0.06);
+}
+
+.a-student-work-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #d8d5dc;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--slate);
+  font-size: 0.72rem;
+}
+
+.a-student-work-top span {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.a-student-writing {
+  margin: 0;
+  padding: 15px 18px 20px;
+  color: #30445a;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: 0.98rem;
+  line-height: 2;
+  transform: rotate(-0.15deg);
+}
+
+.a-example-note {
+  margin-top: 13px;
+  padding: 13px 15px;
+  border-left: 4px solid #7653a6;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.a-example-note strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #7653a6;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.a-example-note p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.a-example-disclaimer {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .a-student-work-top {
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   MODERATION
+========================================================= */
+
+.moderation-section {
+  padding: 72px 0 84px;
+}
+
+.moderation-heading {
+  max-width: 860px;
+  margin-bottom: 30px;
+}
+
+.moderation-heading h2 {
+  margin: 10px 0 14px;
+}
+
+.moderation-heading p {
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+.moderation-clarity,
+.moderation-conversation,
+.moderation-example,
+.moderation-dialogue {
+  margin-top: 26px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #ffffff;
+}
+
+.moderation-clarity-label {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--slate);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.moderation-journey {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.moderation-journey-item {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-height: 88px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--soft);
+}
+
+.moderation-journey-item span {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 850;
+}
+
+.moderation-journey-item strong {
+  color: var(--slate);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.moderation-journey-arrow {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-weight: 850;
+}
+
+.moderation-shared-clarity {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  max-width: 650px;
+  margin: 22px auto 0;
+  align-items: center;
+}
+
+.moderation-shared-clarity > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--slate);
+  color: #ffffff;
+  font-weight: 850;
+}
+
+.moderation-shared-clarity > div {
+  padding: 15px 18px;
+  border-radius: 14px;
+  background: var(--soft);
+}
+
+.moderation-shared-clarity strong {
+  color: var(--slate);
+}
+
+.moderation-shared-clarity p {
+  margin: 4px 0 0;
+  line-height: 1.55;
+}
+
+.moderation-conversation-heading {
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+
+.moderation-conversation-heading h3,
+.moderation-example-heading h3,
+.moderation-dialogue-heading h3 {
+  margin: 9px 0 7px;
+}
+
+.moderation-conversation-heading p,
+.moderation-example-heading p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.moderation-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.moderation-step {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--soft);
+}
+
+.moderation-step-number {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  margin-bottom: 12px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--slate);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.moderation-step h3 {
+  margin: 0 0 7px;
+  font-size: 0.95rem;
+}
+
+.moderation-step p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.moderation-example {
+  background: var(--soft);
+}
+
+.moderation-example-heading {
+  max-width: 780px;
+  margin-bottom: 20px;
+}
+
+.moderation-prompts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.moderation-prompt {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.moderation-prompt span {
+  color: #7653a6;
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.moderation-prompt p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.moderation-agreement {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 22px;
+  margin-top: 20px;
+  padding: 22px;
+  border: 1px solid rgba(95, 143, 78, 0.3);
+  border-radius: 17px;
+  background: #ffffff;
+}
+
+.moderation-agreement-grade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  border-radius: 14px;
+  background: #eef5eb;
+  text-align: center;
+}
+
+.moderation-agreement-grade span {
+  color: #527a45;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.moderation-agreement-grade strong {
+  margin-top: 7px;
+  color: #527a45;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.moderation-agreement-copy h3 {
+  margin: 0 0 8px;
+}
+
+.moderation-agreement-copy p {
+  margin: 0 0 10px;
+  line-height: 1.65;
+}
+
+.moderation-agreement-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.moderation-dialogue-prompts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.moderation-dialogue-prompts blockquote {
+  margin: 0;
+  padding: 17px 19px;
+  border-left: 4px solid #7653a6;
+  border-radius: 12px;
+  background: #f7f4fb;
+  color: var(--slate);
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.moderation-close {
+  max-width: 900px;
+  margin: 54px auto 0;
+  text-align: center;
+}
+
+.moderation-close-label {
+  color: #7653a6;
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.moderation-close h2 {
+  margin: 12px 0 15px;
+  line-height: 1.2;
+}
+
+.moderation-close > p {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.moderation-loop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 24px;
+  padding: 15px 20px;
+  border-radius: 999px;
+  background: var(--slate);
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.moderation-loop strong {
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .moderation-journey {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .moderation-journey-arrow {
+    display: none;
+  }
+
+  .moderation-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .moderation-prompts {
+    grid-template-columns: 1fr;
+  }
+
+  .moderation-agreement {
+    grid-template-columns: 1fr;
+  }
+
+  .moderation-dialogue-prompts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .moderation-journey,
+  .moderation-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .moderation-clarity,
+  .moderation-conversation,
+  .moderation-example,
+  .moderation-dialogue {
+    padding: 20px;
+  }
+}
+.moderation-clarity {
+  border: 4px solid red !important;
+}
