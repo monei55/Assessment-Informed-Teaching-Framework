@@ -4,56 +4,48 @@ const cogs = [
     shortTitle: "Curriculum",
     className: "learning",
     position: "cog-top",
-    href: "#learning",
   },
   {
     title: "Achievement Standards",
     shortTitle: "Standards",
     className: "learning",
     position: "cog-upper-left",
-    href: "#learning",
   },
   {
     title: "Assessment Design",
     shortTitle: "Assessment",
     className: "assessment",
     position: "cog-upper-right",
-    href: "#assessment",
   },
   {
     title: "Marking Guide",
     shortTitle: "Marking Guide",
     className: "assessment",
     position: "cog-right",
-    href: "#assessment",
   },
   {
     title: "Teaching Decisions",
     shortTitle: "Teaching",
     className: "pedagogy",
     position: "cog-lower-right",
-    href: "#pedagogy",
   },
   {
     title: "Evidence of Learning",
     shortTitle: "Evidence",
     className: "impact",
     position: "cog-bottom",
-    href: "#impact",
   },
   {
     title: "Moderation",
     shortTitle: "Moderation",
     className: "impact",
     position: "cog-lower-left",
-    href: "#walkthroughs",
   },
   {
     title: "Visible Learning",
     shortTitle: "Visible Learning",
     className: "pedagogy",
     position: "cog-left",
-    href: "#visible-learning",
   },
 ];
 
@@ -76,22 +68,22 @@ export function FrameworkCycle() {
           <strong>Success</strong>
         </div>
 
-        {cogs.map((cog, index) => (
-          <a
-            key={cog.title}
-            href={cog.href}
-            className={`framework-cog ${cog.className} ${cog.position} ${
-              index % 2 === 0 ? "cog-clockwise" : "cog-counter"
-            }`}
-            aria-label={`${cog.title}: explore this part of the professional reasoning model`}
-          >
-            <span className="cog-teeth" aria-hidden="true" />
-            <span className="cog-label">
-              <strong className="cog-title-full">{cog.title}</strong>
-              <strong className="cog-title-short">{cog.shortTitle}</strong>
-            </span>
-          </a>
-        ))}
+{cogs.map((cog, index) => (
+  <div
+    key={cog.title}
+    className={`framework-cog ${cog.className} ${cog.position} ${
+      index % 2 === 0 ? "cog-clockwise" : "cog-counter"
+    }`}
+    aria-label={`${cog.title}: part of the connected professional reasoning model`}
+  >
+    <span className="cog-teeth" aria-hidden="true" />
+
+    <span className="cog-label">
+      <strong className="cog-title-full">{cog.title}</strong>
+      <strong className="cog-title-short">{cog.shortTitle}</strong>
+    </span>
+  </div>
+))}
       </div>
 
       <p className="cog-caption">

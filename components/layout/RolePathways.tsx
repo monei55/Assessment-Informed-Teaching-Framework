@@ -1,27 +1,30 @@
-const pathways = [
+const lenses = [
   {
     role: "Teacher",
-    title: "Understand it. Apply it. Respond to learning.",
+    sphere: "My classroom",
+    title: "Use the framework to strengthen my practice.",
     description:
-      "Strengthen the professional reasoning behind planning, teaching, assessment and responsive decision-making.",
-    href: "/teachers",
+      "Work through curriculum intent, assessment, pedagogy and impact to make informed teaching decisions that improve student learning.",
+    href: "/curriculum-intent",
     className: "teacher-path",
     number: "01",
   },
   {
     role: "Instructional Coach / Middle Leader",
-    title: "Model it. Coach it. Build capability.",
+    sphere: "Supporting others",
+    title: "Use the framework to build the capability of others.",
     description:
-      "Support educators to make their thinking visible, strengthen professional judgement and build confidence over time.",
+      "Use the same reasoning process to support teachers, strengthen professional judgement and build shared clarity about effective teaching and learning.",
     href: "/coaches",
     className: "coach-path",
     number: "02",
   },
   {
     role: "School Leader",
-    title: "Lead it. Enable it. Monitor impact.",
+    sphere: "Leading systematic practice",
+    title: "Use the framework to lead coherent teaching and learning.",
     description:
-      "Build the conditions, coherence and professional capability required for high-quality instructional decision-making across the school.",
+      "Apply the same reasoning at a whole-school level to build the conditions, capability and systematic practices that strengthen student achievement.",
     href: "/leaders",
     className: "leader-path",
     number: "03",
@@ -33,29 +36,37 @@ export function RolePathways() {
     <section className="section role-pathways-section" id="pathways">
       <div className="container">
         <div className="section-heading">
-          <p className="eyebrow">Choose your pathway</p>
+          <p className="eyebrow">Framework in Action</p>
 
-          <h2>How will you use the framework?</h2>
+          <h2>The framework stays the same. The lens changes how you use it.</h2>
 
           <p>
-            The professional reasoning model remains the same. Your pathway
-            changes according to how you will apply, support or lead the work.
+            Curriculum intent, assessment, pedagogy and impact remain connected
+            at every level. What changes is the sphere of influence — from
+            strengthening your own classroom practice, to supporting others,
+            to leading coherent and systematic practice across a school.
           </p>
         </div>
 
         <div className="role-pathways-grid">
-          {pathways.map((pathway) => (
+          {lenses.map((lens) => (
             <a
-              className={`role-pathway-card ${pathway.className}`}
-              href={pathway.href}
-              key={pathway.role}
+              className={`role-pathway-card ${lens.className}`}
+              href={lens.href}
+              key={lens.role}
             >
-              <span className="role-pathway-number">{pathway.number}</span>
+              <span className="role-pathway-number">{lens.number}</span>
 
               <div className="role-pathway-copy">
-                <p className="role-pathway-role">{pathway.role}</p>
-                <h3>{pathway.title}</h3>
-                <p>{pathway.description}</p>
+                <p className="role-pathway-role">{lens.role}</p>
+
+                <span className="role-pathway-sphere">
+                  {lens.sphere}
+                </span>
+
+                <h3>{lens.title}</h3>
+
+                <p>{lens.description}</p>
               </div>
 
               <span className="role-pathway-arrow" aria-hidden="true">
@@ -65,10 +76,10 @@ export function RolePathways() {
           ))}
         </div>
 
-        <p className="role-pathways-note">
-          Already familiar with the framework? You can also enter through any
-          of the eight connected cogs and go directly to the area you need.
-        </p>
+        <div className="role-pathways-core">
+          <span>At every level</span>
+          <strong>Student Achievement remains our core business.</strong>
+        </div>
       </div>
     </section>
   );

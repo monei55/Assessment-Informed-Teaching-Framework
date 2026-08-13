@@ -1499,15 +1499,29 @@ blockquote footer {
 .cog-label {
   position: relative;
   z-index: 3;
-  display: grid;
-  width: 86%;
-  place-items: center;
+  display: flex;
+  width: 82%;
+  min-height: 58%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
   line-height: 1.08;
+  transform: translateY(-2px);
 }
 
 .cog-label strong {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
   font-size: clamp(0.72rem, 1.2vw, 0.94rem);
   font-weight: 820;
+  line-height: 1.02;
+}
+
+.cog-title-short {
+  display: none;
 }
 .cog-title-short {
   display: none;
@@ -2242,10 +2256,6 @@ blockquote footer {
 
 .student-cog {
   width: 29%;
-}
-
-.cog-label {
-  width: 82%;
 }
 
 .cog-label strong {
@@ -3683,8 +3693,8 @@ blockquote footer {
 }
 
 .evidence-highlight.cognitive {
-  background: var(--assessment-soft);
-  color: var(--assessment);
+  background: var(--learning-soft);
+  color: var(--learning);
 }
 
 .evidence-highlight.evidence {
@@ -5518,4 +5528,490 @@ blockquote footer {
 }
 .moderation-clarity {
   border: 4px solid red !important;
+}
+/* =========================================================
+   MULTI-AGE VISIBLE LEARNING
+   ========================================================= */
+
+.multi-age-visible-learning {
+  width: min(1180px, calc(100% - 40px));
+  margin: 70px auto 0;
+  padding: 0;
+}
+
+.multi-age-heading {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.multi-age-heading h3 {
+  margin: 10px 0 12px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  color: #18324a;
+}
+
+.multi-age-heading p {
+  margin: 0;
+  color: #5d6b78;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* ---------- Multi-age principle ---------- */
+
+.multi-age-principle {
+  max-width: 900px;
+  margin: 0 auto 46px;
+  padding: 22px 28px;
+  text-align: center;
+  background: #f4f8fb;
+  border: 1px solid #dce8ef;
+  border-radius: 18px;
+}
+
+.multi-age-principle strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #18324a;
+  font-size: 1.05rem;
+}
+
+.multi-age-principle p {
+  margin: 0;
+  color: #5d6b78;
+  line-height: 1.6;
+}
+
+
+/* ---------- Wall sections ---------- */
+
+.multi-age-wall-section {
+  margin: 0 0 60px;
+}
+
+.multi-age-wall-heading {
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+
+.multi-age-wall-heading > span {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #567486;
+}
+
+.multi-age-wall-heading h4 {
+  margin: 0 0 8px;
+  font-size: 1.55rem;
+  line-height: 1.25;
+  color: #18324a;
+}
+
+.multi-age-wall-heading p {
+  margin: 0;
+  color: #657481;
+  line-height: 1.65;
+}
+
+.multi-age-wall-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+
+/* ---------- Learning wall image ---------- */
+
+.multi-age-wall-section:first-of-type .multi-age-wall-image {
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 16px 40px rgba(34, 55, 72, 0.1);
+}
+
+
+/* =========================================================
+   BUMP-IT-UP + YEAR LEVEL EXPLORER
+   ========================================================= */
+
+.multi-age-biu-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.multi-age-biu-image {
+  position: sticky;
+  top: 24px;
+}
+
+.multi-age-biu-image .multi-age-wall-image {
+  box-shadow: 0 14px 34px rgba(34, 55, 72, 0.1);
+}
+
+
+/* ---------- Explorer card ---------- */
+
+.year-progression-explorer {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #dfe8ed;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(34, 55, 72, 0.07);
+}
+
+.year-progression-explorer > h4 {
+  margin: 9px 0 8px;
+  font-size: 1.45rem;
+  color: #18324a;
+}
+
+.year-progression-explorer > p {
+  margin: 0 0 20px;
+  color: #667681;
+  line-height: 1.6;
+}
+
+
+/* ---------- Year buttons ---------- */
+
+.year-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 20px 0 26px;
+}
+
+.year-selector button {
+  appearance: none;
+  border: 1px solid #cfdae0;
+  background: #f7fafb;
+  color: #405565;
+  border-radius: 10px;
+  padding: 10px 8px;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.year-selector button:hover {
+  transform: translateY(-1px);
+  border-color: #8ca5b3;
+}
+
+.year-selector button.active {
+  background: #18324a;
+  border-color: #18324a;
+  color: #ffffff;
+}
+
+
+/* ---------- C B A headings ---------- */
+
+.progression-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.progression-heading {
+  padding: 10px 8px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.progression-heading strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #18324a;
+}
+
+.progression-heading span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #61717d;
+}
+
+.progression-heading.c {
+  background: #eef5f8;
+}
+
+.progression-heading.b {
+  background: #f5f3ea;
+}
+
+.progression-heading.a {
+  background: #f3eef6;
+}
+
+
+/* ---------- Progression rows ---------- */
+
+.progression-item {
+  padding: 18px 0;
+  border-top: 1px solid #e7edef;
+}
+
+.progression-item:first-child {
+  border-top: 0;
+}
+
+.progression-item h5 {
+  margin: 0 0 10px;
+  color: #263f51;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.progression-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.progression-cell {
+  min-width: 0;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 0.79rem;
+  line-height: 1.5;
+}
+
+.progression-cell p {
+  margin: 0;
+}
+
+.progression-cell.c {
+  background: #f5f9fb;
+}
+
+.progression-cell.b {
+  background: #faf8f1;
+}
+
+.progression-cell.a {
+  background: #f8f5fa;
+}
+
+
+/* ---------- Short exemplar excerpts ---------- */
+
+.progression-cell blockquote {
+  margin: 11px 0 0;
+  padding: 10px 0 0;
+  border-top: 1px solid rgba(54, 72, 84, 0.12);
+  color: #40515e;
+  font-size: 0.76rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+
+/* ---------- Important clarification ---------- */
+
+.progression-caution {
+  margin-top: 20px;
+  padding: 17px 18px;
+  background: #fffaf0;
+  border: 1px solid #eadfbe;
+  border-radius: 12px;
+}
+
+.progression-caution strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #5d4c22;
+  font-size: 0.88rem;
+}
+
+.progression-caution p {
+  margin: 0;
+  color: #71633e;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   TEACHER THINKING
+   ========================================================= */
+
+.multi-age-teacher-thinking {
+  max-width: 900px;
+  margin: 18px auto 0;
+  padding: 28px 32px;
+  background: #f3f7f9;
+  border-left: 4px solid #6f93a5;
+  border-radius: 0 16px 16px 0;
+}
+
+.multi-age-teacher-thinking > span {
+  display: block;
+  margin-bottom: 6px;
+  color: #638091;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.multi-age-teacher-thinking h4 {
+  margin: 0 0 10px;
+  color: #18324a;
+  font-size: 1.35rem;
+}
+
+.multi-age-teacher-thinking p {
+  margin: 8px 0 0;
+  color: #5d6d78;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .multi-age-biu-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .multi-age-biu-image {
+    position: static;
+  }
+}
+
+@media (max-width: 650px) {
+  .multi-age-visible-learning {
+    width: min(100% - 24px, 1180px);
+    margin-top: 50px;
+  }
+
+  .year-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .progression-columns {
+    display: none;
+  }
+
+  .progression-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progression-cell {
+    padding: 14px;
+  }
+
+  .progression-cell.c::before {
+    content: "C — Secure";
+  }
+
+  .progression-cell.b::before {
+    content: "B — Stronger";
+  }
+
+  .progression-cell.a::before {
+    content: "A — More sophisticated";
+  }
+
+  .progression-cell::before {
+    display: block;
+    margin-bottom: 7px;
+    color: #263f51;
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  .year-progression-explorer {
+    padding: 20px;
+  }
+
+  .multi-age-teacher-thinking {
+    padding: 24px;
+  }
+}
+/* Shared wall / changing year-level lens */
+
+.shared-wall-lens {
+  margin: 16px 0 4px;
+  padding: 12px 15px;
+  background: #f3f7f9;
+  border-left: 3px solid #6f93a5;
+  border-radius: 0 10px 10px 0;
+}
+
+.shared-wall-lens strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #18324a;
+  font-size: 0.82rem;
+}
+
+.shared-wall-lens span {
+  display: block;
+  color: #667681;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+/* =========================================================
+   ROLE LENSES — SPHERE OF INFLUENCE
+   ========================================================= */
+
+.role-pathway-sphere {
+  display: inline-block;
+  margin: 2px 0 10px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #f3f7f9;
+  color: #536775;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.role-pathways-core {
+  max-width: 760px;
+  margin: 28px auto 0;
+  padding: 18px 22px;
+  border: 1px solid #dfe8ed;
+  border-radius: 16px;
+  background: #f4f8fa;
+  text-align: center;
+}
+
+.role-pathways-core span {
+  display: block;
+  margin-bottom: 4px;
+  color: #667681;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.role-pathways-core strong {
+  display: block;
+  color: #18324a;
+  font-size: 1rem;
+  line-height: 1.45;
 }

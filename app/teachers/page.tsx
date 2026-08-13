@@ -5,56 +5,48 @@ const teacherCogs = [
     title: "Curriculum Intent",
     description:
       "Understand what students are expected to know, understand and be able to do.",
-    href: "/curriculum-intent",
     className: "learning",
   },
   {
     title: "Achievement Standards",
     description:
       "Clarify the expected standard of learning and the quality students need to demonstrate.",
-    href: "#",
     className: "learning",
   },
   {
     title: "Assessment Design",
     description:
       "Ensure students have a genuine opportunity to demonstrate the intended learning.",
-    href: "#",
     className: "assessment",
   },
   {
     title: "Marking Guide",
     description:
       "Understand what quality looks like and what distinguishes levels of performance.",
-    href: "#",
     className: "assessment",
   },
   {
     title: "Teaching Decisions",
     description:
       "Design learning for this cohort while maintaining the intended curriculum demand.",
-    href: "#",
     className: "pedagogy",
   },
   {
     title: "Visible Learning",
     description:
       "Make learning, quality and improvement clear and accessible to students.",
-    href: "#",
     className: "pedagogy",
   },
   {
     title: "Evidence of Learning",
     description:
       "Gather and interpret evidence to understand where students are and what they need next.",
-    href: "#",
     className: "impact",
   },
   {
     title: "Moderation",
     description:
       "Use shared professional understanding to make consistent and defensible judgements.",
-    href: "#",
     className: "impact",
   },
 ];
@@ -104,9 +96,8 @@ export default function TeachersPage() {
 
             <div className="teacher-cog-grid">
               {teacherCogs.map((cog, index) => (
-                <a
+                <article
                   className={`teacher-cog-card ${cog.className}`}
-                  href={cog.href}
                   key={cog.title}
                 >
                   <span>{String(index + 1).padStart(2, "0")}</span>
@@ -116,8 +107,8 @@ export default function TeachersPage() {
                     <p>{cog.description}</p>
                   </div>
 
-                  <em aria-hidden="true">→</em>
-                </a>
+                  <em aria-hidden="true"></em>
+                </article>
               ))}
             </div>
           </div>
@@ -170,7 +161,7 @@ export default function TeachersPage() {
             </p>
 
             <a className="button" href="/curriculum-intent">
-              Explore Curriculum Intent
+              Explore the Framework in Action
             </a>
           </div>
         </section>

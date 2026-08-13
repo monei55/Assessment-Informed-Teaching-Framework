@@ -8,6 +8,7 @@ import { CogConnections } from "@/components/layout/CogConnections";
 import { CogsInAction } from "@/components/layout/CogsInAction";
 import { EvidenceReveal } from "@/components/layout/EvidenceReveal";
 import { EvidenceMap } from "@/components/layout/EvidenceMap";
+import { MultiAgeVisibleLearning } from "@/components/layout/MultiAgeVisibleLearning";
 
 export default function CurriculumIntentPage() {
   return (
@@ -649,6 +650,15 @@ export default function CurriculumIntentPage() {
     </div>
   </div>
 </section>
+
+{/* Existing Year 3 Science visible learning example */}
+...
+
+{/* NEW Years 3–6 multi-age example */}
+<MultiAgeVisibleLearning />
+
+{/* Whatever section currently comes next */}
+...
 
 <section className="framework-example-section teaching-decisions-section">
   <div className="container">

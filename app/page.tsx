@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { QuestionCard } from "@/components/QuestionCard";
 import { RolePathways } from "@/components/layout/RolePathways";
 
-const clarityLenses = [
+const frameworkElements = [
   {
     number: "01",
     title: "Learning Clarity",
@@ -156,52 +156,51 @@ export default function Home() {
 
       <main id="top">
         {/* HERO */}
-        <section className="hero">
-          <div className="container hero-grid">
-            <div className="hero-copy hero-reveal">
-              <p className="eyebrow">
-                Assessment Informed Teaching Framework
-              </p>
+<section className="hero">
+  <div className="container hero-grid">
+    <div className="hero-copy hero-reveal">
+      <p className="eyebrow">
+        Assessment Informed Teaching Framework
+      </p>
 
-              <h1>Better instructional decisions begin with clarity.</h1>
+      <h1>Keeping Student Achievement as our core business.</h1>
 
-              <p className="hero-subtitle">
-                A Professional Reasoning Model for Developing Educator
-                Capability
-              </p>
+      <p className="hero-subtitle">
+        A professional reasoning framework for teachers, instructional coaches,
+        middle leaders and school leaders.
+      </p>
 
-              <p className="hero-lead">
-                Connect curriculum, assessment, pedagogy and evidence through
-                one coherent model that strengthens professional capability
-                and improves learning for every student.
-              </p>
+      <p className="hero-lead">
+        Connect curriculum intent, assessment, pedagogy and impact through one
+        coherent framework — then apply that thinking through the lens of your
+        role.
+      </p>
 
-              <div className="hero-actions">
-                <a className="button" href="#strengthen">
-                  Start Your Professional Journey
-                </a>
+      <div className="hero-actions">
+        <a className="button" href="#pathways">
+          Choose Your Lens
+        </a>
 
-                <a className="button button-secondary" href="#framework">
-                  Explore the Connected Model
-                </a>
-              </div>
+        <a className="button button-secondary" href="#framework">
+          Explore the Framework
+        </a>
+      </div>
 
-              <div
-                className="hero-meta"
-                aria-label="Designed for professional use"
-              >
-                <span>Teachers</span>
-                <span>Instructional Coaches</span>
-                <span>School Leaders</span>
-                <span>Professional Learning Teams</span>
-              </div>
-            </div>
+      <div
+        className="hero-meta"
+        aria-label="Designed for professional use"
+      >
+        <span>Teachers</span>
+        <span>Instructional Coaches/Middle Leaders</span>
+        <span>School Leaders</span>
+      </div>
+    </div>
 
-            <div className="cycle-reveal">
-              <FrameworkCycle />
-            </div>
-          </div>
-        </section>
+    <div className="cycle-reveal">
+      <FrameworkCycle />
+    </div>
+  </div>
+</section>
 
         {/* PURPOSE */}
         <section className="section purpose-section">
@@ -237,43 +236,6 @@ export default function Home() {
 
 <RolePathways />
 
-        {/* SELF-SELECTION */}
-        <section className="section section-soft" id="strengthen">
-          <div className="container">
-            <div className="section-heading">
-              <p className="eyebrow">Choose your starting point</p>
-
-              <h2>What would you like to strengthen today?</h2>
-
-              <p>
-                Begin with the professional challenge in front of you. The
-                framework will help you connect it to the wider reasoning
-                process.
-              </p>
-            </div>
-
-            <div className="starting-grid">
-              {startingPoints.map((item) => (
-                <a
-                  className={`starting-card ${item.tone}`}
-                  href={item.href}
-                  key={item.title}
-                >
-                  <span className="starting-number">{item.icon}</span>
-
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-
-                  <span className="starting-arrow" aria-hidden="true">
-                    →
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CONNECTED MODEL */}
         <section className="section section-dark" id="framework">
@@ -298,7 +260,7 @@ export default function Home() {
               </p>
 
               <a className="text-link" href="#clarity-lenses">
-                Explore the four clarity lenses →
+                Explore the four connected elements →
               </a>
             </div>
 
@@ -352,21 +314,20 @@ export default function Home() {
         <section className="section" id="clarity-lenses">
           <div className="container">
             <div className="section-heading">
-              <p className="eyebrow">Four connected lenses</p>
+              <p className="eyebrow">Four connected elements</p>
 
-              <h2>One professional challenge. Four ways of thinking.</h2>
+              <h2>One framework. Four connected areas of professional reasoning.</h2>
 
               <p>
-                The clarity lenses are not separate modules. They work together
-                whenever educators plan, teach, assess, moderate and respond.
+                Currciulum intent, assessment, pedagogy and impact are not separate processes. They work together to keep teaching, evidence and professional decision-making focused on student achievement.
               </p>
             </div>
 
             <div className="question-grid">
-              {clarityLenses.map((lens) => (
-                <QuestionCard key={lens.number} {...lens} />
-              ))}
-            </div>
+  {frameworkElements.map((element) => (
+    <QuestionCard key={element.number} {...element} />
+  ))}
+</div>
           </div>
         </section>
 
@@ -462,47 +423,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PROFESSIONAL USE */}
-        <section className="section" id="professional-use">
-          <div className="container professional-use-grid">
-            <div>
-              <p className="eyebrow">For every educator</p>
-
-              <h2>Learn it. Apply it. Coach it. Lead it.</h2>
-
-              <p>
-                The reasoning process remains consistent. The depth and purpose
-                change according to the professional context.
-              </p>
-            </div>
-
-            <div className="professional-use-list">
-              <div>
-                <strong>Learn</strong>
-                <p>Build understanding of the connected reasoning process.</p>
-              </div>
-
-              <div>
-                <strong>Apply</strong>
-                <p>Use the process during planning, teaching and assessment.</p>
-              </div>
-
-              <div>
-                <strong>Coach</strong>
-                <p>Guide reflective conversations that strengthen capability.</p>
-              </div>
-
-              <div>
-                <strong>Lead</strong>
-                <p>
-                  Establish coherent whole-school approaches without reducing
-                  the work to compliance.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        
         {/* TOOLKIT */}
         <section className="section toolkit-section" id="tools">
           <div className="container">

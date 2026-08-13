@@ -1,10 +1,7 @@
  const links = [
-  { label: "Home", href: "#top" },
+  { label: "Home", href: "/" },
   { label: "Framework", href: "#framework" },
-  { label: "Learning", href: "#learning" },
-  { label: "Assessment", href: "#assessment" },
-  { label: "Pedagogy", href: "#pedagogy" },
-  { label: "Impact", href: "#impact" },
+  { label: "Clarity", href: "#clarity-lenses" },
   { label: "Resources", href: "#tools" },
 ];
 
@@ -14,7 +11,7 @@ export function Header() {
       <div className="container header-inner">
         <a
           className="brand"
-          href="#top"
+          href="#/"
           aria-label="Assessment Informed Teaching Framework home"
         >
           <span className="brand-mark" aria-hidden="true">
@@ -38,8 +35,8 @@ export function Header() {
           ))}
         </nav>
 
-        <a className="button button-small" href="#four-questions">
-          Explore
+        <a className="button button-small" href="/#pathways">
+          Framework in Action
         </a>
       </div>
     </header>
