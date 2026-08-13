@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const lenses = [
   {
     role: "Teacher",
@@ -50,7 +52,8 @@ export function RolePathways() {
 
         <div className="role-pathways-grid">
           {lenses.map((lens) => (
-            <a
+
+            <Link
               className={`role-pathway-card ${lens.className}`}
               href={lens.href}
               key={lens.role}
@@ -72,7 +75,7 @@ export function RolePathways() {
               <span className="role-pathway-arrow" aria-hidden="true">
                 →
               </span>
-            </a>
+            </Link>
           ))}
         </div>
 

@@ -298,7 +298,7 @@ export function MultiAgeVisibleLearning() {
         </div>
 
         <img
-          src="/examples/multi-age-english/learning-wall-years3-6.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/multi-age-english/learning-wall-years3-6.png`}
           alt="Years 3 to 6 English learning wall for a persuasive speaking unit."
           className="multi-age-wall-image"
         />
@@ -317,7 +317,7 @@ export function MultiAgeVisibleLearning() {
         <div className="multi-age-biu-layout">
           <div className="multi-age-biu-image">
             <img
-              src="/examples/multi-age-english/bump-it-up-wall-years3-6.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/multi-age-english/bump-it-up-wall-years3-6.png`}
               alt="Years 3 to 6 bump-it-up wall showing increasing quality in persuasive speaking."
               className="multi-age-wall-image"
             />

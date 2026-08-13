@@ -138,7 +138,7 @@ export default function CurriculumIntentPage() {
   eyebrow="Show me the evidence"
   title="Unpacking the Curriculum Intent"
   sourceLabel="Year 3 Science — Achievement Standard / Marking Guide"
-  imageSrc="/examples/year3-science/achievement-standard.png"
+  imageSrc={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/achievement-standard.png`}
   imageAlt="Extract from the Year 3 Science marking guide showing the curriculum expectations used to unpack the curriculum intent."
   segments={[
     { text: "Students " },
@@ -221,7 +221,7 @@ export default function CurriculumIntentPage() {
   eyebrow="Show me the connection"
   title="From Curriculum Intent to Assessment Design"
   sourceLabel="Year 3 Science — Heat Transfer Investigation"
-  imageSrc="/examples/year3-science/assessment-context.png"
+  imageSrc={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/assessment-context.png`}
   imageAlt="Extract from the Year 3 Science Heat Transfer assessment showing the investigation context and assessment question."
   instruction="Click on the aspects below to see how the assessment creates opportunities for students to demonstrate the intended learning."
   segments={[
@@ -251,14 +251,14 @@ export default function CurriculumIntentPage() {
     },
     {
       text: "identify patterns and relationships",
-      category: "cognitive",
+      category: "demand",
     },
     {
       text: ". Students construct a model of heat transfer and ",
     },
     {
       text: "use evidence from their investigation to explain which material is the best insulator",
-      category: "cognitive",
+      category: "demand",
     },
     {
       text: ".",
@@ -272,7 +272,7 @@ export default function CurriculumIntentPage() {
     },
     {
       label: "Cognitive demand",
-      value: "cognitive",
+      value: "demand",
       className: "assessment",
     },
     {
@@ -612,7 +612,7 @@ export default function CurriculumIntentPage() {
 
     <div className="visible-learning-image">
       <img
-        src="/examples/year3-science/learning-wall-progression.png"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/learning-wall-progression.png`}
         alt="Year 3 Science learning progression showing the expected C standard and how evidence becomes stronger at B and more sophisticated at A."
       />
     </div>
@@ -869,7 +869,7 @@ export default function CurriculumIntentPage() {
 
       <div className="student-work-image">
         <img
-          src="/examples/year3-science/student-work-sample.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/learning-wall-progression.png`}
           alt="Year 3 Science student work sample showing an investigation into insulating materials, including a fair-test plan, temperature data, a heat-transfer model and written explanation."
         />
       </div>
@@ -903,7 +903,7 @@ export default function CurriculumIntentPage() {
   </div>
 </section>
 <EvidenceMap
-  imageSrc="/examples/year3-science/student-work-sample.png"
+  imageSrc={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/student-work-sample.png`}
   imageAlt="Year 3 Science student work sample showing a fair-test investigation, temperature data, heat-transfer model and written explanation."
   aspects={[
     {

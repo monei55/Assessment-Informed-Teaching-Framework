@@ -1,17 +1,19 @@
- const links = [
+import Link from "next/link";
+
+const links = [
   { label: "Home", href: "/" },
-  { label: "Framework", href: "#framework" },
-  { label: "Clarity", href: "#clarity-lenses" },
-  { label: "Resources", href: "#tools" },
+  { label: "Framework", href: "/#framework" },
+  { label: "Clarity", href: "/#clarity-lenses" },
+  { label: "Resources", href: "/#tools" },
 ];
 
 export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a
+        <Link
           className="brand"
-          href="#/"
+          href="/"
           aria-label="Assessment Informed Teaching Framework home"
         >
           <span className="brand-mark" aria-hidden="true">
@@ -25,19 +27,19 @@ export function Header() {
             <strong>Assessment Informed</strong>
             <small>Teaching Framework</small>
           </span>
-        </a>
+        </Link>
 
         <nav aria-label="Primary navigation">
           {links.map((link) => (
-            <a key={link.label} href={link.href}>
+            <Link key={link.label} href={link.href}>
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <a className="button button-small" href="/#pathways">
+        <Link className="button button-small" href="/#pathways">
           Framework in Action
-        </a>
+        </Link>
       </div>
     </header>
   );

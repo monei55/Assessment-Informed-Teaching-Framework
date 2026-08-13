@@ -3692,9 +3692,9 @@ blockquote footer {
   color: var(--learning);
 }
 
-.evidence-highlight.cognitive {
-  background: var(--learning-soft);
-  color: var(--learning);
+.evidence-highlight.demand {
+  background: var(--assessment-soft);
+  color: var(--assessment);
 }
 
 .evidence-highlight.evidence {
@@ -3703,7 +3703,7 @@ blockquote footer {
 }
 
 .evidence-highlight.accessibility {
-  background: var(--impact-soft);
+  background: var(--impact-soft); 
   color: var(--impact);
 }
 /* =========================================================
