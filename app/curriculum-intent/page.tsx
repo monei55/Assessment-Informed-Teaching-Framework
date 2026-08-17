@@ -550,7 +550,7 @@ export default function CurriculumIntentPage() {
     <h3>Turn the marking guide into observable student actions.</h3>
 
     <p>
-      The Student GTMJ acts as the bridge between the formal marking guide
+      The Student Marking Guide acts as the bridge between the formal marking guide
       and visible learning. It breaks the C–B–A progression into specific
       knowledge, skills and evidence that students can recognise and work
       towards.
@@ -605,7 +605,7 @@ export default function CurriculumIntentPage() {
 
       <p>
         The marking guide gives the teacher clarity about quality. The Student
-        GTMJ helps translate that quality into language and actions that can
+        Marking Guide helps translate that quality into language and actions that can
         inform the Learning Wall and Bump-it-Up Wall.
       </p>
     </div>
