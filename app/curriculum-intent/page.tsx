@@ -9,13 +9,17 @@ import { CogsInAction } from "@/components/layout/CogsInAction";
 import { EvidenceReveal } from "@/components/layout/EvidenceReveal";
 import { EvidenceMap } from "@/components/layout/EvidenceMap";
 import { MultiAgeVisibleLearning } from "@/components/layout/MultiAgeVisibleLearning";
+import { TeacherLensNav } from "@/components/TeacherLensNav";
 
 export default function CurriculumIntentPage() {
   return (
     <>
       <Header />
 
-      <main>
+      <div className="teacher-lens-layout">
+        <TeacherLensNav />
+
+        <main className="teacher-lens-content">
         <PageHero
           eyebrow="Professional Reasoning"
           title="Curriculum Intent"
@@ -35,7 +39,8 @@ export default function CurriculumIntentPage() {
           </p>
         </BigIdea>
 
-        <WhyItMatters
+        <div id="why-it-matters">
+          <WhyItMatters
           clearTitle="When Curriculum Intent is Clear"
           unclearTitle="When Curriculum Intent is Unclear"
           clearItems={[
@@ -52,9 +57,11 @@ export default function CurriculumIntentPage() {
             "Moderation becomes inconsistent.",
             "Learning gaps remain hidden.",
           ]}
-        />
+          />
+        </div>
 
-        <ProfessionalReasoning
+        <div id="understand">
+          <ProfessionalReasoning
           title="How do I unpack Curriculum Intent?"
           intro="Start with the curriculum, not the activities. Work through the intended learning before deciding how it will be taught."
           steps={[
@@ -95,9 +102,11 @@ export default function CurriculumIntentPage() {
                 "Bring the pieces together and describe what students will need to demonstrate successfully.",
             },
           ]}
-        />
+          />
+        </div>
 
-        <ProfessionalWalkthrough
+        <div id="professional-walkthrough">
+          <ProfessionalWalkthrough
           title="From curriculum intent to clear learning"
           context="This walkthrough shows how professional reasoning begins before lesson planning. The purpose is not to copy the example, but to see how the thinking connects."
           steps={[
@@ -132,8 +141,10 @@ export default function CurriculumIntentPage() {
                 "Only now begin deciding how this particular cohort will be taught, supported and challenged to reach success.",
             },
           ]}
-        />
+          />
+        </div>
 
+        <div id="show-evidence">
   <EvidenceReveal
   eyebrow="Show me the evidence"
   title="Unpacking the Curriculum Intent"
@@ -217,6 +228,9 @@ export default function CurriculumIntentPage() {
   ]}
   overallReasoning="Curriculum intent brings all of these aspects together. Students need the required knowledge and terminology, but they must also develop the skills and cognitive capability to use that knowledge successfully. Teaching decisions therefore need to address the whole intent rather than isolated parts of the standard."
 />
+        </div>
+
+        <div id="show-connection">
 <EvidenceReveal
   eyebrow="Show me the connection"
   title="From Curriculum Intent to Assessment Design"
@@ -315,10 +329,14 @@ export default function CurriculumIntentPage() {
   overallReasoning="Assessment Design turns Curriculum Intent into observable evidence. The assessment must align with the intended learning, preserve the required cognitive demand, provide sufficient opportunities for students to demonstrate what they know and can do, and allow students to access the task without changing the standard being assessed."
   tryPrompt="Look at your own assessment. Where can students demonstrate each part of the curriculum intent? Is the cognitive demand preserved, and are there any unnecessary barriers preventing students from showing what they know and can do?"
 />
-<section className="framework-example-section">
+        </div>
+
+<section className="framework-example-section" id="marking-guide">
   <div className="container">
     <div className="framework-example-heading">
-    <span className="framework-example-eyebrow">Marking Guide</span>
+   <span className="framework-example-eyebrow">
+  Marking Guide
+</span>
 
     <h2>What does increasing quality look like?</h2>
 
@@ -596,7 +614,7 @@ export default function CurriculumIntentPage() {
     </p>
   </div>
 </div>
-<section className="section visible-learning-example">
+<section className="section visible-learning-example" id="visible-learning">
   <div className="container">
     <div className="section-heading">
       <p className="eyebrow">Visible Learning</p>
@@ -618,7 +636,7 @@ export default function CurriculumIntentPage() {
     </div>
 
     <div className="visible-learning-purpose-grid">
-      <article className="visible-learning-purpose learning-wall-purpose">
+      <article className="visible-learning-purpose learning-wall-purpose" id="learning-wall">
         <span>Learning Wall</span>
         <h3>What am I learning?</h3>
 
@@ -628,7 +646,7 @@ export default function CurriculumIntentPage() {
         </p>
       </article>
 
-      <article className="visible-learning-purpose bump-wall-purpose">
+      <article className="visible-learning-purpose bump-wall-purpose" id="bump-it-up-wall">
         <span>Bump-it-Up Wall</span>
         <h3>How can I improve?</h3>
 
@@ -660,7 +678,7 @@ export default function CurriculumIntentPage() {
 {/* Whatever section currently comes next */}
 ...
 
-<section className="framework-example-section teaching-decisions-section">
+<section className="framework-example-section teaching-decisions-section" id="teaching-decisions">
   <div className="container">
 
     <div className="framework-example-heading">
@@ -833,7 +851,7 @@ export default function CurriculumIntentPage() {
   </div>
 </section>
 
-<section className="framework-example-section evidence-learning-section">
+<section className="framework-example-section evidence-learning-section" id="evidence-of-learning">
   <div className="container">
 
     <div className="framework-example-heading">
@@ -902,6 +920,7 @@ export default function CurriculumIntentPage() {
     </div>
   </div>
 </section>
+<div id="trace-judgement">
 <EvidenceMap
   imageSrc={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/student-work-sample.png`}
   imageAlt="Year 3 Science student work sample showing a fair-test investigation, temperature data, heat-transfer model and written explanation."
@@ -1013,7 +1032,8 @@ export default function CurriculumIntentPage() {
     },
   ]}
 />
-<section className="moderation-section">
+</div>
+<section className="moderation-section" id="moderation">
   <div className="container">
     <div className="moderation-heading">
       <span className="framework-example-eyebrow">Moderation</span>
@@ -1276,7 +1296,8 @@ export default function CurriculumIntentPage() {
   </div>
 </section>
 
-        <CogConnections
+        <div id="connect">
+          <CogConnections
           currentCog="Curriculum Intent"
           connections={[
             {
@@ -1329,8 +1350,10 @@ export default function CurriculumIntentPage() {
               className: "impact",
             },
           ]}
-        />
-      </main>
+          />
+        </div>
+        </main>
+      </div>
     </>
   );
 }
