@@ -6015,3 +6015,103 @@ blockquote footer {
   font-size: 1rem;
   line-height: 1.45;
 }
+/* =========================================================
+   TEACHER LENS NAVIGATION
+   ========================================================= */
+
+.teacher-lens-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  align-items: start;
+  gap: 42px;
+}
+
+.teacher-lens-nav {
+  position: sticky;
+  top: 102px;
+  align-self: start;
+  max-height: calc(100vh - 125px);
+  overflow-y: auto;
+}
+
+.teacher-lens-nav-inner {
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow-small);
+}
+
+.teacher-lens-nav-eyebrow {
+  margin: 0 0 4px;
+  color: var(--learning);
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.teacher-lens-nav-title {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.teacher-lens-nav-links {
+  display: grid;
+  gap: 3px;
+}
+
+.teacher-lens-nav-links a {
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  gap: 6px;
+  align-items: center;
+  padding: 8px 9px;
+  border-radius: 9px;
+  color: var(--slate);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.teacher-lens-nav-links a span {
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 850;
+}
+
+.teacher-lens-nav-links a:hover,
+.teacher-lens-nav-links a:focus-visible {
+  background: var(--learning-soft);
+  color: var(--learning);
+}
+
+.teacher-lens-content {
+  min-width: 0;
+}
+
+@media (max-width: 980px) {
+  .teacher-lens-layout {
+    display: block;
+  }
+
+  .teacher-lens-nav {
+    position: relative;
+    top: auto;
+    max-height: none;
+    margin-bottom: 32px;
+  }
+
+  .teacher-lens-nav-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .teacher-lens-nav-links {
+    grid-template-columns: 1fr;
+  }
+}
