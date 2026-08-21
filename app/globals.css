@@ -6505,3 +6505,465 @@ blockquote footer {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   COACH / MIDDLE LEADER — FRAMEWORK IN ACTION CARD SYSTEM
+   ========================================================= */
+
+.coach-framework-hero {
+  background:
+    radial-gradient(
+      circle at 88% 16%,
+      rgba(94, 139, 90, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f8fbf8 100%);
+}
+
+/* Shared grid spacing */
+
+.coach-capability-grid,
+.coach-question-grid,
+.coach-walkthrough-grid,
+.coach-connection-grid,
+.coach-design-grid,
+.coach-progression-grid,
+.coach-visible-grid,
+.coach-decision-grid,
+.coach-evidence-questions,
+.coach-moderation-grid,
+.coach-connect-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+/* Grid layouts */
+
+.coach-capability-grid,
+.coach-connection-grid,
+.coach-progression-grid,
+.coach-connect-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.coach-question-grid,
+.coach-decision-grid,
+.coach-evidence-questions,
+.coach-moderation-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.coach-walkthrough-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.coach-design-grid,
+.coach-visible-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Shared card treatment */
+
+.coach-capability-card,
+.coach-question-grid article,
+.coach-walkthrough-grid article,
+.coach-connection-grid article,
+.coach-design-grid article,
+.coach-progression-grid article,
+.coach-visible-grid article,
+.coach-decision-grid article,
+.coach-evidence-questions article,
+.coach-moderation-grid article,
+.coach-connect-grid article {
+  position: relative;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+}
+
+/* Label styling */
+
+.coach-capability-card > span,
+.coach-question-grid article > span,
+.coach-walkthrough-grid article > span,
+.coach-connection-grid article > span,
+.coach-design-grid article > span,
+.coach-visible-grid article > span,
+.coach-decision-grid article > span,
+.coach-evidence-questions article > span,
+.coach-moderation-grid article > span,
+.coach-connect-grid article > span {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Card headings */
+
+.coach-capability-card h3,
+.coach-question-grid article h3,
+.coach-walkthrough-grid article h3,
+.coach-connection-grid article h3,
+.coach-design-grid article h3,
+.coach-progression-grid article h3,
+.coach-visible-grid article h3,
+.coach-decision-grid article h3,
+.coach-evidence-questions article h3,
+.coach-moderation-grid article h3,
+.coach-connect-grid article h3 {
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+/* Card body copy */
+
+.coach-capability-card p,
+.coach-question-grid article p,
+.coach-walkthrough-grid article p,
+.coach-connection-grid article p,
+.coach-design-grid article p,
+.coach-progression-grid article p,
+.coach-visible-grid article p,
+.coach-decision-grid article p,
+.coach-evidence-questions article p,
+.coach-moderation-grid article p,
+.coach-connect-grid article p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* Coach prompts inside cards */
+
+.coach-walkthrough-grid article strong,
+.coach-design-grid article strong,
+.coach-visible-grid article strong {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  color: var(--assessment);
+  font-size: 0.8rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   COLOUR CODING BY SECTION
+   ========================================================= */
+
+/* Why it matters */
+
+.coach-capability-grid .coach-capability-card:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-capability-grid .coach-capability-card:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-capability-grid .coach-capability-card:nth-child(3) {
+  border-top: 5px solid var(--impact);
+}
+
+/* Understand */
+
+.coach-question-grid article:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-question-grid article:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-question-grid article:nth-child(3) {
+  border-top: 5px solid var(--pedagogy);
+}
+
+.coach-question-grid article:nth-child(4) {
+  border-top: 5px solid var(--impact);
+}
+
+/* Professional walkthrough */
+
+.coach-walkthrough-grid article:nth-child(4n + 1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-walkthrough-grid article:nth-child(4n + 2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-walkthrough-grid article:nth-child(4n + 3) {
+  border-top: 5px solid var(--pedagogy);
+}
+
+.coach-walkthrough-grid article:nth-child(4n + 4) {
+  border-top: 5px solid var(--impact);
+}
+
+/* Connection */
+
+.coach-connection-grid article:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-connection-grid article:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-connection-grid article:nth-child(3) {
+  border-top: 5px solid var(--pedagogy);
+}
+
+/* Design the question */
+
+.coach-design-grid article:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-design-grid article:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+/* Marking guide */
+
+.coach-progression-grid article:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-progression-grid article:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-progression-grid article:nth-child(3) {
+  border-top: 5px solid var(--impact);
+}
+
+/* Visible Learning */
+
+.coach-visible-grid article:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-visible-grid article:nth-child(2) {
+  border-top: 5px solid var(--pedagogy);
+}
+
+/* Teaching Decisions */
+
+.coach-decision-grid article:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-decision-grid article:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-decision-grid article:nth-child(3) {
+  border-top: 5px solid var(--pedagogy);
+}
+
+.coach-decision-grid article:nth-child(4) {
+  border-top: 5px solid var(--impact);
+}
+
+/* Evidence of Learning */
+
+.coach-evidence-questions article:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-evidence-questions article:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-evidence-questions article:nth-child(3) {
+  border-top: 5px solid var(--pedagogy);
+}
+
+.coach-evidence-questions article:nth-child(4) {
+  border-top: 5px solid var(--impact);
+}
+
+/* Moderation */
+
+.coach-moderation-grid article:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-moderation-grid article:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-moderation-grid article:nth-child(3) {
+  border-top: 5px solid var(--pedagogy);
+}
+
+.coach-moderation-grid article:nth-child(4) {
+  border-top: 5px solid var(--impact);
+}
+
+/* Connect */
+
+.coach-connect-grid article:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-connect-grid article:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-connect-grid article:nth-child(3) {
+  border-top: 5px solid var(--impact);
+}
+
+/* =========================================================
+   EVIDENCE / CALLOUT PANELS
+   ========================================================= */
+
+.coach-evidence-panel,
+.coach-dialogue-callout,
+.coach-trace-flow,
+.coach-final-actions {
+  margin-top: 26px;
+}
+
+.coach-evidence-panel {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+}
+
+.coach-evidence-statement {
+  margin-top: 18px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.coach-evidence-statement mark {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: var(--learning-soft);
+  color: var(--learning);
+  font-weight: 800;
+}
+
+.coach-dialogue-callout {
+  padding: 22px 24px;
+  border-left: 5px solid var(--assessment);
+  border-radius: 16px;
+  background: var(--assessment-soft);
+}
+
+.coach-dialogue-callout strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--assessment);
+}
+
+.coach-dialogue-callout p {
+  margin: 0;
+}
+
+/* Trace judgement */
+
+.coach-trace-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+}
+
+.coach-trace-flow span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--slate);
+  font-weight: 800;
+}
+
+/* Final model / coach / build capability strip */
+
+.coach-final-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.coach-final-actions > div {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.coach-final-actions > div:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.coach-final-actions > div:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.coach-final-actions > div:nth-child(3) {
+  border-top: 5px solid var(--impact);
+}
+
+.coach-final-actions strong {
+  color: var(--ink);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .coach-capability-grid,
+  .coach-connection-grid,
+  .coach-progression-grid,
+  .coach-connect-grid,
+  .coach-final-actions,
+  .coach-question-grid,
+  .coach-decision-grid,
+  .coach-evidence-questions,
+  .coach-moderation-grid,
+  .coach-walkthrough-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .coach-capability-grid,
+  .coach-question-grid,
+  .coach-walkthrough-grid,
+  .coach-connection-grid,
+  .coach-design-grid,
+  .coach-progression-grid,
+  .coach-visible-grid,
+  .coach-decision-grid,
+  .coach-evidence-questions,
+  .coach-moderation-grid,
+  .coach-connect-grid,
+  .coach-final-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-trace-flow {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
