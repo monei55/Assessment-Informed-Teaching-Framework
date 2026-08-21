@@ -4,6 +4,7 @@ const teacherLensSections = [
   { label: "Professional Walkthrough", href: "#professional-walkthrough" },
   { label: "Show me the Evidence", href: "#show-evidence" },
   { label: "Show me the Connection", href: "#show-connection" },
+  { label: "Design the Question", href: "#design-the-question" },
   { label: "Marking Guide", href: "#marking-guide" },
   { label: "Visible Learning", href: "#visible-learning" },
   { label: "Learning Wall", href: "#learning-wall" },

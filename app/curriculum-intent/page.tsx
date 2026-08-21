@@ -331,6 +331,179 @@ export default function CurriculumIntentPage() {
 />
         </div>
 
+<section className="framework-example-section question-design-section" id="design-the-question">
+  <div className="container">
+    <div className="framework-example-heading">
+      <span className="framework-example-eyebrow">Design the Assessment Opportunity</span>
+      <h2>One opportunity. Multiple ways to demonstrate the progression.</h2>
+      <p>
+        Once the cognitive demand and progression of quality are clear, teachers
+        can design assessment opportunities that allow students to demonstrate
+        increasingly sophisticated understanding without creating a separate
+        question for every level of achievement.
+      </p>
+    </div>
+
+    <div className="question-design-principle">
+      <span className="evidence-source-label">The design principle</span>
+      <h3>Keep the concept constant. Vary the depth of evidence students can show.</h3>
+      <p>
+        A well-designed assessment opportunity gives every student an accessible
+        way into the task while still providing room to demonstrate stronger and
+        more sophisticated thinking. Progression may come from a change in
+        cognitive demand, or from greater precision, control, independence and
+        sophistication within the same cognitive process.
+      </p>
+    </div>
+
+    <div className="question-design-example">
+      <div className="question-design-example-heading">
+        <span className="evidence-source-label">Example 1 — Interpreting the investigation</span>
+        <h3>What do your results show about which material was the best insulator?</h3>
+        <p>
+          This is one coherent assessment opportunity. Students work with the same
+          concept and the same investigation evidence, while the response structure
+          allows increasing cognitive demand to become visible.
+        </p>
+      </div>
+
+      <div className="question-progression-grid">
+        <article className="question-progression-card question-identify">
+          <span className="question-progression-step">01</span>
+          <span className="question-progression-verb">Identify</span>
+          <h3>Which material was the best insulator?</h3>
+          <p>Select the material that kept the water warm for the longest.</p>
+          <div className="question-choice-example">
+            <span>☐ Foil</span>
+            <span>☐ Towel</span>
+            <span>☐ Bubble wrap</span>
+            <span>☐ Other</span>
+          </div>
+        </article>
+
+        <article className="question-progression-card question-describe">
+          <span className="question-progression-step">02</span>
+          <span className="question-progression-verb">Describe</span>
+          <h3>What pattern or relationship can you see?</h3>
+          <p>Describe what happened to the temperature of the water across the investigation.</p>
+          <div className="question-response-stem">
+            The water wrapped in __________ stayed __________ because the temperature __________.
+          </div>
+        </article>
+
+        <article className="question-progression-card question-explain">
+          <span className="question-progression-step">03</span>
+          <span className="question-progression-verb">Explain</span>
+          <h3>Why was this material the best insulator?</h3>
+          <p>
+            Use evidence from your results and your understanding of heat transfer
+            to explain your conclusion.
+          </p>
+          <div className="question-response-stem">
+            My data shows __________. This happened because heat __________.
+          </div>
+        </article>
+      </div>
+
+      <div className="question-design-reasoning">
+        <strong>What should I notice?</strong>
+        <p>
+          Students do not complete three unrelated questions about three different
+          ideas. They respond to one investigation focus. The structure supports
+          them to identify the result, describe the pattern and then explain the
+          result using evidence and science understanding.
+        </p>
+      </div>
+    </div>
+
+    <div className="question-design-example">
+      <div className="question-design-example-heading">
+        <span className="evidence-source-label">Example 2 — Planning a fair investigation</span>
+        <h3>
+          How will you plan and conduct a safe and fair investigation to find out
+          which material keeps water warm for the longest?
+        </h3>
+        <p>
+          In this example, the cognitive process remains centred on planning.
+          Increasing quality is demonstrated through greater precision, control
+          and independence within the same response.
+        </p>
+      </div>
+
+      <div className="fair-test-question-table">
+        <div className="fair-test-question-heading">
+          <span>What will you change?</span>
+          <span>What will you measure?</span>
+          <span>What will you keep the same?</span>
+          <span>How will you keep the investigation safe and fair?</span>
+        </div>
+        <div className="fair-test-question-response">
+          <span>________________</span>
+          <span>________________</span>
+          <span>________________</span>
+          <span>________________</span>
+        </div>
+      </div>
+
+      <div className="planning-progression-grid">
+        <article className="planning-progression-card progression-c">
+          <span className="progression-grade">C</span>
+          <span className="progression-label">Expected standard</span>
+          <h3>Plan a safe and fair investigation.</h3>
+          <p>
+            The student uses the structure to identify what will be changed,
+            measured and kept the same so the investigation can provide a fair comparison.
+          </p>
+        </article>
+
+        <article className="planning-progression-card progression-b">
+          <span className="progression-grade">B</span>
+          <span className="progression-label">Stronger evidence</span>
+          <h3>Plan with greater consideration.</h3>
+          <p>
+            The student also considers the safe use of materials and equipment
+            and makes the planning decisions more deliberate and complete.
+          </p>
+        </article>
+
+        <article className="planning-progression-card progression-a">
+          <span className="progression-grade">A</span>
+          <span className="progression-label">More sophisticated evidence</span>
+          <h3>Plan with precision and control.</h3>
+          <p>
+            The student independently identifies what will change, what will be
+            measured and further elements that need to be controlled, showing a
+            more precise understanding of fair testing.
+          </p>
+        </article>
+      </div>
+
+      <div className="question-design-reasoning">
+        <strong>What should I notice?</strong>
+        <p>
+          The verb has not simply changed from identify to describe to explain.
+          The same planning opportunity produces different levels of evidence
+          because the quality of the planning becomes increasingly precise,
+          controlled, independent and sophisticated.
+        </p>
+      </div>
+    </div>
+
+    <div className="question-design-check">
+      <span className="evidence-source-label">Before finalising an assessment question or response format, ask:</span>
+      <h3>
+        Can one coherent opportunity allow students to demonstrate the expected
+        learning and also show how far their understanding can progress?
+      </h3>
+      <p>
+        Look for unnecessary repetition. If three separate questions are asking
+        students to demonstrate increasing quality within the same concept,
+        consider whether the response can be redesigned as one connected opportunity instead.
+      </p>
+    </div>
+  </div>
+</section>
+
 <section className="framework-example-section" id="marking-guide">
   <div className="container">
     <div className="framework-example-heading">
@@ -623,8 +796,8 @@ export default function CurriculumIntentPage() {
 
       <p>
         The marking guide gives the teacher clarity about quality. The Student
-        Marking Guide helps translate that quality into language and actions that
-        can inform the Learning Wall and Bump-it-Up Wall.
+        Marking Guide helps translate that quality into language and actions that can
+        inform the Learning Wall and Bump-it-Up Wall.
       </p>
     </div>
 
@@ -636,7 +809,7 @@ export default function CurriculumIntentPage() {
     </div>
 
     <div className="visible-learning-purpose-grid">
-      <article className="visible-learning-purpose learning-wall-purpose">
+      <article className="visible-learning-purpose learning-wall-purpose" id="learning-wall">
         <span>Learning Wall</span>
         <h3>What am I learning?</h3>
 
@@ -646,7 +819,7 @@ export default function CurriculumIntentPage() {
         </p>
       </article>
 
-      <article className="visible-learning-purpose bump-wall-purpose">
+      <article className="visible-learning-purpose bump-wall-purpose" id="bump-it-up-wall">
         <span>Bump-it-Up Wall</span>
         <h3>How can I improve?</h3>
 
@@ -666,90 +839,17 @@ export default function CurriculumIntentPage() {
         curriculum intent, assessment evidence and progression of quality.
       </p>
     </div>
-
-    <div className="visible-learning-example-group science-worked-example">
-      <div className="visible-learning-example-heading">
-        <span className="framework-example-eyebrow">
-          Year 3 Science — Worked Example
-        </span>
-
-        <h3>Making the learning visible in the heat-transfer unit</h3>
-
-        <p>
-          These two wall examples connect directly to the Year 3 Science
-          investigation used throughout this walkthrough: which material will keep
-          water warm for the longest?
-        </p>
-      </div>
-
-      <article
-        className="visible-learning-purpose learning-wall-purpose"
-        id="learning-wall"
-      >
-        <div className="visible-learning-purpose-heading">
-          <span>Learning Wall</span>
-          <h3>What are we learning?</h3>
-        </div>
-
-        <p>
-          The Learning Wall makes the intended learning visible throughout the
-          unit. It brings together the important knowledge, scientific vocabulary,
-          fair-investigation skills and questions students need to revisit as their
-          understanding develops.
-        </p>
-
-        <div className="student-work-image">
-          <img
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/heat-transfer-learning-wall.png`}
-            alt="Year 3 Science Heat Energy and Heat Transfer learning wall showing key knowledge, vocabulary, fair investigation skills and evidence students will use."
-          />
-        </div>
-      </article>
-
-      <article
-        className="visible-learning-purpose bump-wall-purpose"
-        id="bump-it-up-wall"
-      >
-        <div className="visible-learning-purpose-heading">
-          <span>Bump-it-Up Wall</span>
-          <h3>What does stronger evidence look like?</h3>
-        </div>
-
-        <p>
-          The Bump-it-Up Wall helps students see how the quality of their evidence
-          and explanation can improve. It connects the assessment expectations to
-          concrete examples of planning, measuring, identifying patterns, using
-          scientific vocabulary and drawing evidence-based conclusions.
-        </p>
-
-        <div className="student-work-image">
-          <img
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/heat-transfer-bump-it-up-wall.png`}
-            alt="Year 3 Science Heat Energy and Heat Transfer Bump-it-Up Wall showing how students can strengthen their investigation evidence and scientific explanations."
-          />
-        </div>
-      </article>
-    </div>
-
-    <div className="visible-learning-example-heading multi-age-example-heading">
-      <span className="framework-example-eyebrow">
-        Multi-Age Classroom Example
-      </span>
-
-      <h3>Adapting visible learning across year levels</h3>
-
-      <p>
-        In a multi-age classroom, the same visible learning structures can support
-        students working towards different year-level expectations. The example
-        below shows how Learning Walls and Bump-it-Up Walls can maintain clear
-        curriculum expectations while making progression manageable within one
-        classroom.
-      </p>
-    </div>
   </div>
 </section>
 
+{/* Existing Year 3 Science visible learning example */}
+...
+
+{/* NEW Years 3–6 multi-age example */}
 <MultiAgeVisibleLearning />
+
+{/* Whatever section currently comes next */}
+...
 
 <section className="framework-example-section teaching-decisions-section" id="teaching-decisions">
   <div className="container">
