@@ -791,13 +791,11 @@ export default function CurriculumIntentPage() {
   <div className="container">
     <div className="section-heading">
       <p className="eyebrow">Visible Learning</p>
-
       <h2>Make the progression visible and useful.</h2>
-
       <p>
         The marking guide gives the teacher clarity about quality. The Student
-        Marking Guide helps translate that quality into language and actions that can
-        inform the Learning Wall and Bump-it-Up Wall.
+        Marking Guide helps translate that quality into language and actions that
+        can inform the Learning Wall and Bump-it-Up Wall.
       </p>
     </div>
 
@@ -809,20 +807,18 @@ export default function CurriculumIntentPage() {
     </div>
 
     <div className="visible-learning-purpose-grid">
-      <article className="visible-learning-purpose learning-wall-purpose" id="learning-wall">
+      <article className="visible-learning-purpose learning-wall-purpose">
         <span>Learning Wall</span>
         <h3>What am I learning?</h3>
-
         <p>
           Use the expected standard to make the essential knowledge, skills,
           concepts and terminology visible to students throughout the unit.
         </p>
       </article>
 
-      <article className="visible-learning-purpose bump-wall-purpose" id="bump-it-up-wall">
+      <article className="visible-learning-purpose bump-wall-purpose">
         <span>Bump-it-Up Wall</span>
         <h3>How can I improve?</h3>
-
         <p>
           Use the C → B → A progression to show students what changes as the
           quality, precision and sophistication of their evidence improves.
@@ -832,24 +828,78 @@ export default function CurriculumIntentPage() {
 
     <div className="visible-learning-reasoning">
       <strong>Professional reasoning</strong>
-
       <p>
         The wall should not be created first and the curriculum fitted into it
         afterwards. It is built from the teacher's understanding of the
         curriculum intent, assessment evidence and progression of quality.
       </p>
     </div>
+
+    <div className="visible-learning-example-group science-worked-example">
+      <div className="visible-learning-example-heading">
+        <span className="framework-example-eyebrow">Year 3 Science — Worked Example</span>
+        <h3>Making the learning visible in the heat-transfer unit</h3>
+        <p>
+          These two wall examples connect directly to the Year 3 Science
+          investigation used throughout this walkthrough: which material will keep
+          water warm for the longest?
+        </p>
+      </div>
+
+      <article className="visible-learning-purpose learning-wall-purpose" id="learning-wall">
+        <div className="visible-learning-purpose-heading">
+          <span>Learning Wall</span>
+          <h3>What are we learning?</h3>
+        </div>
+        <p>
+          The Learning Wall makes the intended learning visible throughout the
+          unit. It brings together the important knowledge, scientific vocabulary,
+          fair-investigation skills and questions students need to revisit as their
+          understanding develops.
+        </p>
+        <div className="student-work-image">
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/heat-transfer-learning-wall.png`}
+            alt="Year 3 Science Heat Energy and Heat Transfer learning wall showing key knowledge, vocabulary, fair investigation skills and evidence students will use."
+          />
+        </div>
+      </article>
+
+      <article className="visible-learning-purpose bump-wall-purpose" id="bump-it-up-wall">
+        <div className="visible-learning-purpose-heading">
+          <span>Bump-it-Up Wall</span>
+          <h3>What does stronger evidence look like?</h3>
+        </div>
+        <p>
+          The Bump-it-Up Wall helps students see how the quality of their evidence
+          and explanation can improve. It connects the assessment expectations to
+          concrete examples of planning, measuring, identifying patterns, using
+          scientific vocabulary and drawing evidence-based conclusions.
+        </p>
+        <div className="student-work-image">
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/examples/year3-science/heat-transfer-bump-it-up-wall.png`}
+            alt="Year 3 Science Heat Energy and Heat Transfer Bump-it-Up Wall showing how students can strengthen their investigation evidence and scientific explanations."
+          />
+        </div>
+      </article>
+    </div>
+
+    <div className="visible-learning-example-heading multi-age-example-heading">
+      <span className="framework-example-eyebrow">Multi-Age Classroom Example</span>
+      <h3>Adapting visible learning across year levels</h3>
+      <p>
+        In a multi-age classroom, the same visible learning structures can support
+        students working towards different year-level expectations. The example
+        below shows how Learning Walls and Bump-it-Up Walls can maintain clear
+        curriculum expectations while making progression manageable within one
+        classroom.
+      </p>
+    </div>
   </div>
 </section>
 
-{/* Existing Year 3 Science visible learning example */}
-...
-
-{/* NEW Years 3–6 multi-age example */}
 <MultiAgeVisibleLearning />
-
-{/* Whatever section currently comes next */}
-...
 
 <section className="framework-example-section teaching-decisions-section" id="teaching-decisions">
   <div className="container">
