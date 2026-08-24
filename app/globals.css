@@ -6967,3 +6967,227 @@ blockquote footer {
     flex-direction: column;
   }
 }
+/* =========================================================
+   PRINCIPAL / SCHOOL LEADER — FRAMEWORK IN ACTION
+   ========================================================= */
+
+.leader-framework-hero {
+  background:
+    radial-gradient(circle at 88% 16%, rgba(122, 93, 154, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #faf9fc 100%);
+}
+
+.leader-system-grid,
+.leader-walkthrough-grid,
+.leader-evidence-grid,
+.leader-progression-grid,
+.leader-visible-grid,
+.leader-decision-grid,
+.leader-moderation-grid,
+.leader-connect-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.leader-system-grid,
+.leader-evidence-grid,
+.leader-progression-grid,
+.leader-connect-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.leader-walkthrough-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.leader-visible-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.leader-decision-grid,
+.leader-moderation-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.leader-system-grid article,
+.leader-walkthrough-grid article,
+.leader-evidence-grid article,
+.leader-progression-grid article,
+.leader-visible-grid article,
+.leader-decision-grid article,
+.leader-moderation-grid article,
+.leader-connect-grid article {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+}
+
+.leader-system-grid article > span,
+.leader-walkthrough-grid article > span,
+.leader-evidence-grid article > span,
+.leader-visible-grid article > span,
+.leader-decision-grid article > span,
+.leader-moderation-grid article > span,
+.leader-connect-grid article > span {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.leader-system-grid article:nth-child(4n + 1),
+.leader-walkthrough-grid article:nth-child(4n + 1),
+.leader-evidence-grid article:nth-child(4n + 1),
+.leader-decision-grid article:nth-child(4n + 1),
+.leader-moderation-grid article:nth-child(4n + 1),
+.leader-connect-grid article:nth-child(4n + 1) {
+  border-top: 5px solid var(--learning);
+}
+
+.leader-system-grid article:nth-child(4n + 2),
+.leader-walkthrough-grid article:nth-child(4n + 2),
+.leader-evidence-grid article:nth-child(4n + 2),
+.leader-decision-grid article:nth-child(4n + 2),
+.leader-moderation-grid article:nth-child(4n + 2),
+.leader-connect-grid article:nth-child(4n + 2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.leader-system-grid article:nth-child(4n + 3),
+.leader-walkthrough-grid article:nth-child(4n + 3),
+.leader-evidence-grid article:nth-child(4n + 3),
+.leader-decision-grid article:nth-child(4n + 3),
+.leader-moderation-grid article:nth-child(4n + 3),
+.leader-connect-grid article:nth-child(4n + 3) {
+  border-top: 5px solid var(--pedagogy);
+}
+
+.leader-system-grid article:nth-child(4n + 4),
+.leader-walkthrough-grid article:nth-child(4n + 4),
+.leader-evidence-grid article:nth-child(4n + 4),
+.leader-decision-grid article:nth-child(4n + 4),
+.leader-moderation-grid article:nth-child(4n + 4),
+.leader-connect-grid article:nth-child(4n + 4) {
+  border-top: 5px solid var(--impact);
+}
+
+.leader-visible-grid article:first-child {
+  border-top: 5px solid var(--learning);
+}
+
+.leader-visible-grid article:last-child {
+  border-top: 5px solid var(--pedagogy);
+}
+
+.leader-progression-grid article.progression-c {
+  border-top: 5px solid var(--learning);
+}
+
+.leader-progression-grid article.progression-b {
+  border-top: 5px solid var(--assessment);
+}
+
+.leader-progression-grid article.progression-a {
+  border-top: 5px solid var(--impact);
+}
+
+.leader-progression-grid article > span {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: var(--soft);
+  font-weight: 850;
+}
+
+.leader-connection-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: var(--shadow-small);
+}
+
+.leader-connection-flow span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--slate);
+  font-weight: 800;
+}
+
+.leader-final-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.leader-final-actions > div {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.leader-final-actions > div:nth-child(1) {
+  border-top: 5px solid var(--learning);
+}
+
+.leader-final-actions > div:nth-child(2) {
+  border-top: 5px solid var(--assessment);
+}
+
+.leader-final-actions > div:nth-child(3) {
+  border-top: 5px solid var(--impact);
+}
+
+.leader-back-link {
+  margin-top: 30px;
+}
+
+@media (max-width: 1100px) {
+  .leader-system-grid,
+  .leader-walkthrough-grid,
+  .leader-evidence-grid,
+  .leader-progression-grid,
+  .leader-connect-grid,
+  .leader-final-actions,
+  .leader-decision-grid,
+  .leader-moderation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .leader-system-grid,
+  .leader-walkthrough-grid,
+  .leader-evidence-grid,
+  .leader-progression-grid,
+  .leader-visible-grid,
+  .leader-decision-grid,
+  .leader-moderation-grid,
+  .leader-connect-grid,
+  .leader-final-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .leader-connection-flow {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
